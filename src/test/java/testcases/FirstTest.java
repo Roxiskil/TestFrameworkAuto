@@ -19,7 +19,7 @@ public class FirstTest {
         driver.get("https://mvnrepository.com/open-source/testing-frameworks");
     }
     @Test
-public void openWebsite() {
+    public void openWeb() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -29,7 +29,7 @@ public void openWebsite() {
         driver.get("http://bestbuy.com");
     }
     @Test
-public void openSignInPage(){
+    public void openSignIn() throws InterruptedException {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
     ChromeOptions options = new ChromeOptions();
@@ -43,7 +43,7 @@ public void openSignInPage(){
     driver.findElement(By.xpath("//a[@data-lid='ubr_mby_signin_b']")).click();
     }
     @Test
-    public void fillEmailAndPasswordFields(){
+    public void fillEmailAndPasswordFields() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -62,7 +62,7 @@ public void openSignInPage(){
     }
 
     @Test
-public void fillEmailAndPasswordAndPressEnter(){
+public void fillEmailAndPasswordAndPressEnter() throws InterruptedException {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
     ChromeOptions options = new ChromeOptions();
@@ -81,7 +81,7 @@ public void fillEmailAndPasswordAndPressEnter(){
     }
 
     @Test
-public void fillEmailAndPasswordFieldsAndValidateError(){
+    public void fillEmailAndPasswordFieldsAndValidateError() throws InterruptedException {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
     ChromeOptions options = new ChromeOptions();
@@ -100,9 +100,8 @@ public void fillEmailAndPasswordFieldsAndValidateError(){
     Thread.sleep(3000);
     System.out.println(driver.findElement(By.xpath("//div[@aria-label='Error']")).isDisplayed());
     }
-
     @Test
-public void fillEmailAndPasswordFieldsAndValidateCheckbox(){
+public void fillEmailAndPasswordFieldsAndValidateCheckbox() throws InterruptedException {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
     ChromeOptions options = new ChromeOptions();
@@ -116,9 +115,8 @@ public void fillEmailAndPasswordFieldsAndValidateCheckbox(){
     driver.findElement(By.xpath("//a[@data-lid='ubr_mby_signin_b']")).click();
     System.out.println(driver.findElement(By.id("cia-remember-me")).isSelected());
     }
-
     @Test
-public void verifyCheckboxText(){
+public void verifyCheckboxText() throws InterruptedException {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
     ChromeOptions options = new ChromeOptions();
@@ -132,9 +130,8 @@ public void verifyCheckboxText(){
     driver.findElement(By.xpath("//a[@data-lid='ubr_mby_signin_b']")).click();
     System.out.println(driver.findElement(By.xpath("//label[@for='cia-remember-me']")).getText());
     }
-
     @Test
-public void isEnabled()throws InterruptedException{
+    public void isEnabled()throws InterruptedException{
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
     ChromeOptions options = new ChromeOptions();
@@ -148,9 +145,6 @@ public void isEnabled()throws InterruptedException{
    System.out.println(driver.findElement(By.xpath("//button[text()='Cancel' and @href='javascript:void(0);']")).isEnabled());
    System.out.println(driver.findElement(By.xpath("//button[@id='nextBtnSubTopic']")).isEnabled());
     }
-
-
-
     @Test
     public void openWebsite() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
@@ -163,7 +157,7 @@ public void isEnabled()throws InterruptedException{
     }
 
     @Test
-    public void openSignInPage(){
+    public void openSignInPage() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -176,9 +170,8 @@ public void isEnabled()throws InterruptedException{
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
     }
-
     @Test
-    public void validateEmailAndPasswordFields(){
+    public void validateEmailAndPasswordFields() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -195,9 +188,8 @@ public void isEnabled()throws InterruptedException{
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("roxiskil123");
         driver.findElement(By.xpath("//div[@id='loginButton']/button")).submit();
     }
-
     @Test
-    public void fillInvalidEmailAndPasswordAndPressEnter(){
+    public void fillInvalidEmailAndPasswordAndPressEnter() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -214,9 +206,8 @@ public void isEnabled()throws InterruptedException{
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("123roxiskil");
         driver.findElement(By.xpath("//div[@id='loginButton']/button")).sendKeys(Keys.ENTER);
     }
-
     @Test
-    public void fillEmailAndPasswordFieldsAndValidateError(){
+    public void EmailAndPasswordFieldsAndValidateError() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -235,9 +226,8 @@ public void isEnabled()throws InterruptedException{
         Thread.sleep(3000);
         System.out.println(driver.findElement(By.xpath("//div[@class='test-login-errors']")).isDisplayed());
     }
-
     @Test
-    public void validateRememberMeCheckboxTextCheckedByDefault(){
+    public void validateRememberMeCheckboxTextCheckedByDefault() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -251,3 +241,7 @@ public void isEnabled()throws InterruptedException{
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
         System.out.println(driver.findElement(By.xpath("//input[@id='auth-page-remember-me']")).getText());
     }
+}
+
+
+
