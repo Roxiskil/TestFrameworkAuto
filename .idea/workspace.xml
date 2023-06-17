@@ -41,7 +41,25 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.FirstTest.startDriver">
+  <component name="RunManager" selected="TestNG.FirstTest.validateRememberMeCheckboxTextCheckedByDefault">
+    <configuration name="FirstTest.isEnabled" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
+      <option name="METHOD_NAME" value="isEnabled" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FirstTest.openWebsite" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
@@ -60,7 +78,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.startDriver" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest.validateEmailAndPasswordFields" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -70,7 +88,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
       <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
-      <option name="METHOD_NAME" value="startDriver" />
+      <option name="METHOD_NAME" value="validateEmailAndPasswordFields" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.validateRememberMeCheckboxTextCheckedByDefault" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
+      <option name="METHOD_NAME" value="validateRememberMeCheckboxTextCheckedByDefault" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.verifyCheckboxText" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
+      <option name="METHOD_NAME" value="verifyCheckboxText" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -80,8 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FirstTest.startDriver" />
+        <item itemvalue="TestNG.FirstTest.validateRememberMeCheckboxTextCheckedByDefault" />
+        <item itemvalue="TestNG.FirstTest.validateEmailAndPasswordFields" />
         <item itemvalue="TestNG.FirstTest.openWebsite" />
+        <item itemvalue="TestNG.FirstTest.isEnabled" />
+        <item itemvalue="TestNG.FirstTest.verifyCheckboxText" />
       </list>
     </recent_temporary>
   </component>
