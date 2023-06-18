@@ -227,7 +227,7 @@ public void verifyCheckboxText() throws InterruptedException {
         System.out.println(driver.findElement(By.xpath("//div[@class='test-login-errors']")).isDisplayed());
     }
     @Test
-    public void validateRememberMeCheckboxTextCheckedByDefault() throws InterruptedException {
+    public void validateRememberMeCheckboxTextSelectedByDefault() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -239,7 +239,7 @@ public void verifyCheckboxText() throws InterruptedException {
         driver.findElement(By.xpath("//span[text()='Account']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
-        System.out.println(driver.findElement(By.xpath("//input[@id='auth-page-remember-me']")).getText());
+        System.out.println(driver.findElement(By.xpath("//input[@id='auth-page-remember-me']")).isSelected());
     }
 }
 
