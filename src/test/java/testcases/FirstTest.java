@@ -77,7 +77,7 @@ public void fillEmailAndPasswordAndPressEnter() throws InterruptedException {
 
     driver.findElement(By.xpath("//input[@type='email']")).sendKeys("email");
     driver.findElement(By.xpath("//input[@type='password']")).sendKeys("password");
-    driver.findElement(By.xpath("//button[text()=''Sign In]")).sendKeys(Keys.ENTER);
+    driver.findElement(By.xpath("//button[text()='Sign In']")).sendKeys(Keys.ENTER);
     }
 
     @Test
@@ -166,7 +166,6 @@ public void verifyCheckboxText() throws InterruptedException {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://test.my-fork.com");
 
-        driver.findElement(By.xpath("//span[text()='Account']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
     }
@@ -180,7 +179,6 @@ public void verifyCheckboxText() throws InterruptedException {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://test.my-fork.com");
 
-        driver.findElement(By.xpath("//span[text()='Account']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
 
@@ -198,13 +196,12 @@ public void verifyCheckboxText() throws InterruptedException {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://test.my-fork.com");
 
-        driver.findElement(By.xpath("//span[text()='Account']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
 
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys("roxiskil123");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("123roxiskil");
-        driver.findElement(By.xpath("//div[@id='loginButton']/button")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//button[text()='Log In']")).sendKeys(Keys.ENTER);
     }
     @Test
     public void EmailAndPasswordFieldsAndValidateError() throws InterruptedException {
@@ -216,7 +213,6 @@ public void verifyCheckboxText() throws InterruptedException {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://test.my-fork.com");
 
-        driver.findElement(By.xpath("//span[text()='Account']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
 
@@ -236,7 +232,6 @@ public void verifyCheckboxText() throws InterruptedException {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://test.my-fork.com");
 
-        driver.findElement(By.xpath("//span[text()='Account']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
         System.out.println(driver.findElement(By.xpath("//input[@id='auth-page-remember-me']")).isSelected());
