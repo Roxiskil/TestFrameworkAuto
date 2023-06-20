@@ -220,7 +220,7 @@ public void verifyCheckboxText() throws InterruptedException {
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("123roxiskil");
         driver.findElement(By.xpath("//div[@id='loginButton']/button")).sendKeys(Keys.ENTER);
         Thread.sleep(3000);
-        System.out.println(driver.findElement(By.xpath("//div[@class='test-login-errors']")).isDisplayed());
+        System.out.println(driver.findElement(By.xpath("//p[@text-point='login-error']/..")).getText());
     }
     @Test
     public void validateRememberMeCheckboxTextSelectedByDefault() throws InterruptedException {

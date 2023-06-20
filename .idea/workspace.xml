@@ -41,7 +41,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.FirstTest.fillInvalidEmailAndPasswordAndPressEnter">
+  <component name="RunManager" selected="TestNG.FirstTest.EmailAndPasswordFieldsAndValidateError">
     <configuration name="FirstTest.EmailAndPasswordFieldsAndValidateError" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
@@ -134,10 +134,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FirstTest.EmailAndPasswordFieldsAndValidateError" />
         <item itemvalue="TestNG.FirstTest.fillInvalidEmailAndPasswordAndPressEnter" />
         <item itemvalue="TestNG.FirstTest.fillEmailAndPasswordAndPressEnter" />
         <item itemvalue="TestNG.FirstTest.validateRememberMeCheckboxTextSelectedByDefault" />
-        <item itemvalue="TestNG.FirstTest.EmailAndPasswordFieldsAndValidateError" />
         <item itemvalue="TestNG.FirstTest.validateEmailAndPasswordFields" />
       </list>
     </recent_temporary>
