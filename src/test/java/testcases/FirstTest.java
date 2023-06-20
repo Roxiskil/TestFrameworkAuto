@@ -170,7 +170,7 @@ public void verifyCheckboxText() throws InterruptedException {
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
     }
     @Test
-    public void validateEmailAndPasswordFields() throws InterruptedException {
+    public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -184,7 +184,7 @@ public void verifyCheckboxText() throws InterruptedException {
 
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys("roxiskil@gmail.com");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("roxiskil123");
-        driver.findElement(By.xpath("//div[@id='loginButton']/button")).submit();
+        driver.findElement(By.xpath("//div[@id='loginButton']/button")).isDisplayed();
     }
     @Test
     public void fillInvalidEmailAndPasswordAndPressEnter() throws InterruptedException {
