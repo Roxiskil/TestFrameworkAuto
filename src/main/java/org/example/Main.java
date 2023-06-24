@@ -1,6 +1,6 @@
 package org.example;
 
-//HomeWork
+//HomeWork Part 1
 
 /* 1. username or firstname
 age
@@ -50,6 +50,7 @@ public class Main {
     }
 }
 
+//HomeWork Part 2
 
 
 

@@ -10,6 +10,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -41,7 +48,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="TestNG.JavaMethodsTest.forLoop">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="TestAutomationFramework" />
@@ -55,7 +62,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.EmailAndPasswordFieldsAndValidateError" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="JavaMethodsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -64,8 +71,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
-      <option name="METHOD_NAME" value="EmailAndPasswordFieldsAndValidateError" />
+      <option name="MAIN_CLASS_NAME" value="testcases.JavaMethodsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaMethodsTest.forLoop" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.JavaMethodsTest" />
+      <option name="METHOD_NAME" value="forLoop" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -73,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.fillInvalidEmailAndPasswordAndPressEnter" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="JavaMethodsTest.testJavaMethods" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -82,8 +106,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
-      <option name="METHOD_NAME" value="fillInvalidEmailAndPasswordAndPressEnter" />
+      <option name="MAIN_CLASS_NAME" value="testcases.JavaMethodsTest" />
+      <option name="METHOD_NAME" value="testJavaMethods" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -91,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.validateEmailPasswordLogInDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="JavaMethodsTest.testSwitch" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -100,26 +124,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
-      <option name="METHOD_NAME" value="validateEmailPasswordLogInDisplayed" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstTest.validateRememberMeCheckboxTextSelectedByDefault" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestAutomationFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.FirstTest" />
-      <option name="METHOD_NAME" value="validateRememberMeCheckboxTextSelectedByDefault" />
+      <option name="MAIN_CLASS_NAME" value="testcases.JavaMethodsTest" />
+      <option name="METHOD_NAME" value="testSwitch" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -129,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.JavaMethodsTest.forLoop" />
+        <item itemvalue="TestNG.JavaMethodsTest.testSwitch" />
+        <item itemvalue="TestNG.JavaMethodsTest.testJavaMethods" />
+        <item itemvalue="TestNG.JavaMethodsTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="TestNG.FirstTest.validateRememberMeCheckboxTextSelectedByDefault" />
-        <item itemvalue="TestNG.FirstTest.EmailAndPasswordFieldsAndValidateError" />
-        <item itemvalue="TestNG.FirstTest.fillInvalidEmailAndPasswordAndPressEnter" />
-        <item itemvalue="TestNG.FirstTest.validateEmailPasswordLogInDisplayed" />
       </list>
     </recent_temporary>
   </component>
