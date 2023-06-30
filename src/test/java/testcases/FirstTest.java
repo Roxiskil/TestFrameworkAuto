@@ -1,18 +1,118 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package testcases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class FirstTest {
+public class FirstTest4 {
+    public ChromeDriver driver;
+    public Locators locators = new Locators();
+    protected String websiteURL = "https://test.my-fork.com";
+
+    public FirstTest4() {
+    }
+
+    @BeforeMethod
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        this.driver = new ChromeDriver(options);
+    }
+
+    public void takeMeToSignInPage() throws InterruptedException {
+        this.driver.get(this.websiteURL);
+        this.driver.findElement(this.locators.account_Btn).click();
+        Thread.sleep(1000L);
+        this.driver.findElement(this.locators.signIn_Btn).click();
+    }
+
+    public void fillUpCredentials(String email, String password) {
+        this.driver.findElement(By.xpath("//input[@type='email']")).sendKeys(new CharSequence[]{"email"});
+        this.driver.findElement(By.xpath("//input[@type='password']")).sendKeys(new CharSequence[]{"password"});
+    }
 
     @Test
-    public void openBrowser(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\IdeaProjects\\TestAutomationFramework/src/test/resources/executables/chromedriver.exe");
-        ChromeDriver driver = new ChromeDriver();
-        driver.get("https://mvnrepository.com/");
-        driver.manage().window().maximize();
-        driver.close();
+    public void openWebsite() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        ChromeDriver driver = new ChromeDriver(options);
+        driver.get(this.websiteURL);
+    }
 
+    @Test
+    public void openSignInPage() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        ChromeDriver driver = new ChromeDriver(options);
+        driver.get(this.websiteURL);
+        Thread.sleep(1000L);
+        driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
+    }
 
+    @Test
+    public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        ChromeDriver driver = new ChromeDriver(options);
+        driver.get(this.websiteURL);
+        Thread.sleep(1000L);
+        driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"roxiskil@gmail.com"});
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(new CharSequence[]{"roxiskil123"});
+        driver.findElement(By.xpath("//div[@id='loginButton']/button")).isDisplayed();
+    }
+
+    @Test
+    public void fillInvalidEmailAndPasswordAndPressEnter() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        ChromeDriver driver = new ChromeDriver(options);
+        driver.get("https://test.my-fork.com");
+        Thread.sleep(1000L);
+        driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"roxiskil123"});
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(new CharSequence[]{"123roxiskil"});
+        driver.findElement(By.xpath("//button[text()='Log In']")).sendKeys(new CharSequence[]{Keys.ENTER});
+    }
+
+    @Test
+    public void EmailAndPasswordFieldsAndValidateError() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        ChromeDriver driver = new ChromeDriver(options);
+        driver.get(this.websiteURL);
+        Thread.sleep(1000L);
+        driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"roxiskil123"});
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(new CharSequence[]{"123roxiskil"});
+        driver.findElement(By.xpath("//div[@id='loginButton']/button")).sendKeys(new CharSequence[]{Keys.ENTER});
+        Thread.sleep(3000L);
+        System.out.println(driver.findElement(By.xpath("//p[@text-point='login-error']/..")).getText());
+    }
+
+    @Test
+    public void validateRememberMeCheckboxTextSelectedByDefault() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        ChromeDriver driver = new ChromeDriver(options);
+        driver.get(this.websiteURL);
+        Thread.sleep(1000L);
+        driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
+        System.out.println(driver.findElement(By.xpath("//input[@id='auth-page-remember-me']")).isSelected());
     }
 }
