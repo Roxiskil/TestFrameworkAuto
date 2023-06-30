@@ -48,7 +48,12 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pageobjects" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.FourLessonTest.validateEmailPasswordLogInDisplayed">
     <configuration name="FourLessonTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
@@ -141,9 +146,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.FourLessonTest.validateEmailPasswordLogInDisplayed" />
+        <item itemvalue="TestNG.FourLessonTest.openSignInPage" />
         <item itemvalue="TestNG.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" />
         <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
-        <item itemvalue="TestNG.FourLessonTest.openSignInPage" />
         <item itemvalue="TestNG.FourLessonTest" />
       </list>
     </recent_temporary>

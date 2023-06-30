@@ -12,12 +12,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class FirstTest4 {
+public class FirstTest{
     public ChromeDriver driver;
     public Locators locators = new Locators();
     protected String websiteURL = "https://test.my-fork.com";
 
-    public FirstTest4() {
+    public FirstTest() {
     }
 
     @BeforeMethod
@@ -30,7 +30,7 @@ public class FirstTest4 {
 
     public void takeMeToSignInPage() throws InterruptedException {
         this.driver.get(this.websiteURL);
-        this.driver.findElement(this.locators.account_Btn).click();
+        this.driver.findElement(this.locators.logIn_Btn).click();
         Thread.sleep(1000L);
         this.driver.findElement(this.locators.signIn_Btn).click();
     }

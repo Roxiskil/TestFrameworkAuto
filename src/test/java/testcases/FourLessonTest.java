@@ -5,15 +5,20 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import pageobjects.HomePage;
+import pageobjects.SignInPage;
 
-public class FourLessonTest {
-    public ChromeDriver driver;
+public class FourLessonTest extends BaseTest{
     public Locators locators = new Locators();
     protected String websiteURL = "https://test.my-fork.com";
     public String emailTxtField = "//input[@id='email']";
     public String passwordTxtField = "//input[@id='password']";
-    @BeforeMethod
+
+    public String emailValue = "roxiskil@gmail.com";
+    public String passwordValue = "roxiskil123";
+    @BeforeTest
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
@@ -36,13 +41,13 @@ public class FourLessonTest {
     }
     @Test
     public void openSignInPage() throws InterruptedException {
-        takeMeToSignInPage();
+        homePage.clickSignIn();
     }
     @Test
     public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
-        takeMeToSignInPage();
-        fillUpCredentials("roxiskil@gmail.com", "roxiskil123");
-        driver.findElement(By.xpath("//div[@id='loginButton']/button")).isDisplayed();
+
+        homePage.clickSignIn();
+        signInPage.fillTheSignInForm();
     }
     public void fillInvalidEmailAndPasswordAndPressEnter() throws InterruptedException {
         takeMeToSignInPage();
