@@ -22,7 +22,7 @@ public class HomePage extends BaseMain {
     String emailValue = "roxiskil@gmail.com";
     String passwordValue = "roxiskil123";
 
-    public void clickSignIn() {
+    public void clickSignIn() throws InterruptedException {
         driver.get(websiteURL);
         driver.findElement(By.xpath(logIn_Btn)).click();
         Thread.sleep(2000);

@@ -5,8 +5,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import pageobjects.HomePage;
-import pageobjects.SignInPage;
+import pageobjects.*;
 
 public class BaseTest {
 

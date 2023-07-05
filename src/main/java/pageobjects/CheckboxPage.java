@@ -17,7 +17,7 @@ public class CheckboxPage extends BaseMain {
 
         Thread.sleep(1000L);
         driver.findElement(By.xpath(logIn_Btn)).click();
-        System.out.println(driver.findElement(By.xpath(rememberMe_Checkbox)).isSelected();
+        driver.findElement(By.xpath(rememberMe_Checkbox)).isSelected();
 
     }
 }

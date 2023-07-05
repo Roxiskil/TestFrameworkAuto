@@ -1,6 +1,7 @@
 package pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ErrorValidationPage extends BaseMain {
@@ -18,7 +19,7 @@ public class ErrorValidationPage extends BaseMain {
     String emailValue = "roxiskil@gmail.com";
     String passwordValue = "roxiskil123";
 
-    public void validateError();{
+    public void validateError() throws InterruptedException {
         driver.findElement(By.xpath(logIn_Btn)).click();
         driver.findElement(By.xpath(emailTxtField)).sendKeys(emailValue);
         driver.findElement(By.xpath(passwordTxtField)).sendKeys(passwordValue);
