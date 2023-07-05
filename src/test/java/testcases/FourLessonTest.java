@@ -18,13 +18,6 @@ public class FourLessonTest extends BaseTest{
 
     public String emailValue = "roxiskil@gmail.com";
     public String passwordValue = "roxiskil123";
-    @BeforeTest
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-    }
     public void takeMeToSignInPage() throws InterruptedException {
         driver.get(websiteURL);
         driver.findElement(locators.logIn_Btn).click();
@@ -41,8 +34,10 @@ public class FourLessonTest extends BaseTest{
     }
     @Test
     public void openSignInPage() throws InterruptedException {
+
         homePage.clickSignIn();
     }
+
     @Test
     public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
 

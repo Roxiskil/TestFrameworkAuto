@@ -10,12 +10,12 @@ import pageobjects.SignInPage;
 
 public class BaseTest {
 
-  ChromeDriver driver;
+  public ChromeDriver driver;
   HomePage homePage;
   SignInPage signInPage;
 
     @BeforeTest
-    public void startDriver() {
+    public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -23,7 +23,6 @@ public class BaseTest {
         homePage = new HomePage(driver);
         signInPage = new SignInPage(driver);
     }
-
     @AfterTest
     public void closeBrowser() {
         driver.close();

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SignInPage extends BaseMain{
 
-    public HomePage(ChromeDriver driver){
+    public SignInPage (ChromeDriver driver){
         super(driver);
     }
 
@@ -19,8 +19,8 @@ public class SignInPage extends BaseMain{
     String passwordValue = "roxiskil123";
 
     public void fillTheSignInForm(){
-        driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"roxiskil123"});
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(new CharSequence[]{"123roxiskil"});
-        driver.findElement(By.xpath("//button[text()='Log In']")).sendKeys(new CharSequence[]{Keys.ENTER});
+        driver.findElement(By.xpath(emailTxtField)).sendKeys(emailValue);
+        driver.findElement(By.xpath(passwordTxtField)).sendKeys(passwordValue);
+        driver.findElement(By.xpath(logIn_Btn)).submit();
     }
 }
