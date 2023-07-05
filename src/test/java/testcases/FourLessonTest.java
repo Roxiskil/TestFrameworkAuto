@@ -37,28 +37,34 @@ public class FourLessonTest extends BaseTest{
 
         homePage.clickSignIn();
     }
-
     @Test
     public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
 
         homePage.clickSignIn();
         signInPage.fillTheSignInForm();
     }
+
+    @Test
     public void fillInvalidEmailAndPasswordAndPressEnter() throws InterruptedException {
-        takeMeToSignInPage();
-        fillUpCredentials("roxiskil", "r123");
-        driver.findElement(By.xpath("//button[text()='Log In']")).sendKeys(Keys.ENTER);
+
+        homePage.clickSignIn();
+        signInPage.fillTheSignInForm();
+        invalidDataPage.fillTheSignInFormIncorrectly();
+
     }
     @Test
     public void EmailAndPasswordFieldsAndValidateError() throws InterruptedException {
-        fillInvalidEmailAndPasswordAndPressEnter();
-        Thread.sleep(3000);
-        System.out.println(driver.findElement(By.xpath("//p[@text-point='login-error']/..")).getText());
+
+        homePage.clickSignIn();
+        signInPage.fillTheSignInForm();
+        errorValidationPage.validateError();
     }
+
     @Test
     public void validateRememberMeCheckboxTextSelectedByDefault() throws InterruptedException {
-        takeMeToSignInPage();
-        System.out.println(driver.findElement(By.xpath("//input[@id='auth-page-remember-me']")).isSelected());
+
+        homePage.clickSignIn();
+        checkboxPage.validateRememberMeCheckbox();
     }
 }
 

@@ -14,6 +14,12 @@ public class BaseTest {
   HomePage homePage;
   SignInPage signInPage;
 
+  InvalidDataPage invalidDataPage;
+
+  ErrorValidationPage errorValidationPage;
+
+  CheckboxPage checkboxPage;
+
     @BeforeTest
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
@@ -22,6 +28,9 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         homePage = new HomePage(driver);
         signInPage = new SignInPage(driver);
+        invalidDataPage = new InvalidDataPage(driver);
+        errorValidationPage = new ErrorValidationPage(driver);
+        checkboxPage = new CheckboxPage(driver);
     }
     @AfterTest
     public void closeBrowser() {
