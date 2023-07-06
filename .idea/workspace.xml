@@ -53,8 +53,8 @@
       <recent name="pageobjects" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FourLessonTest.validateEmailPasswordLogInDisplayed">
-    <configuration name="FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DataStorage.data">
+    <configuration name="DataStorage.data" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -63,8 +63,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.FourLessonTest" />
-      <option name="METHOD_NAME" value="fillInvalidEmailAndPasswordAndPressEnter" />
+      <option name="MAIN_CLASS_NAME" value="testcases.DataStorage" />
+      <option name="METHOD_NAME" value="data" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -146,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DataStorage.data" />
         <item itemvalue="TestNG.FourLessonTest.validateEmailPasswordLogInDisplayed" />
         <item itemvalue="TestNG.FourLessonTest.openSignInPage" />
         <item itemvalue="TestNG.JavaMethodTest.validateEmailPasswordLogInDisplayed" />
         <item itemvalue="TestNG.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" />
-        <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
       </list>
     </recent_temporary>
   </component>

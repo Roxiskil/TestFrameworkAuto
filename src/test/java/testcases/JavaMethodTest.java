@@ -1,8 +1,6 @@
 package testcases;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class JavaMethodTest extends BaseTest {
@@ -13,11 +11,10 @@ public class JavaMethodTest extends BaseTest {
     String logIn_Btn = "//div[@id='loginButton']/button']";
     String emailTxtField = "//input[@id='email']";
     String passwordTxtField = "//input[@id='password']";
-}
 
-        //values
-        String emailValue = "roxiskil@gmail.com";
-        String passwordValue = "roxiskil123";
+    //values
+    String emailValue = "roxiskil@gmail.com";
+    String passwordValue = "roxiskil123";
 
     @Test
     public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
@@ -25,9 +22,10 @@ public class JavaMethodTest extends BaseTest {
         driver.get(websiteURL);
 
         Thread.sleep(2000);
-        driver.findElement (By.xpath(signIn_Btn)).click();
+        driver.findElement(By.xpath(signIn_Btn)).click();
         driver.findElement(By.xpath(emailTxtField)).sendKeys(new CharSequence[]{"roxiskil@gmail.com"});
         driver.findElement(By.xpath(passwordTxtField)).sendKeys(new CharSequence[]{"roxiskil123"});
         driver.findElement(By.xpath(logIn_Btn)).isDisplayed();
     }
+}
 

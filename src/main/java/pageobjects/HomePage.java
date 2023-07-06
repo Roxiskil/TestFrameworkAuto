@@ -24,7 +24,6 @@ public class HomePage extends BaseMain {
 
     public void clickSignIn() throws InterruptedException {
         driver.get(websiteURL);
-        driver.findElement(By.xpath(logIn_Btn)).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath(signIn_Btn)).click();
 
