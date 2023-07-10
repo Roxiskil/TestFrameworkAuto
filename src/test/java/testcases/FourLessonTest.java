@@ -10,12 +10,14 @@ import org.testng.annotations.Test;
 import pageobjects.HomePage;
 import pageobjects.SignInPage;
 
-public class FourLessonTest extends BaseTest{
+public class FourLessonTest extends BaseTest {
     @Test
     public void openSignInPage() throws InterruptedException {
 
         homePage.clickSignIn();
+        homePage.clickSignUp();
     }
+
     @Test
     public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
 
@@ -31,6 +33,7 @@ public class FourLessonTest extends BaseTest{
         invalidDataPage.fillTheSignInFormIncorrectly();
 
     }
+
     @Test
     public void EmailAndPasswordFieldsAndValidateError() throws InterruptedException {
 
@@ -45,5 +48,14 @@ public class FourLessonTest extends BaseTest{
         homePage.clickSignIn();
         checkboxPage.validateRememberMeCheckbox();
     }
+
+    @Test
+    public void openSignUpPage() throws InterruptedException {
+
+        homePage.clickSignUp();
+
+
+    }
 }
+
 

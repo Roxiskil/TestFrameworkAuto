@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import pageobjects.*;
 
+import java.time.Duration;
+
 public class BaseTest {
 
   public ChromeDriver driver;
@@ -21,6 +23,7 @@ public class BaseTest {
 
     @BeforeTest
     public void setUp() {
+        // System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -30,9 +33,14 @@ public class BaseTest {
         invalidDataPage = new InvalidDataPage(driver);
         errorValidationPage = new ErrorValidationPage(driver);
         checkboxPage = new CheckboxPage(driver);
+        SignUpPage signUpPage = new SignUpPage(driver);
+
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
+
     }
     @AfterTest
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 }

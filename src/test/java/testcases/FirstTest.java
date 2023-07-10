@@ -9,8 +9,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class FirstTest{
     public ChromeDriver driver;
@@ -80,9 +84,13 @@ public class FirstTest{
         ChromeOptions options = new ChromeOptions();
         options.addArguments(new String[]{"--remote-allow-origins=*"});
         ChromeDriver driver = new ChromeDriver(options);
+
         driver.get("https://test.my-fork.com");
-        Thread.sleep(1000L);
-        driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
+        Thread.sleep(100);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+        waitForDropdownToLoad.until(ExpectedConditions.visibilityOfElementLocated(logIn_Btn));
+        driver.findElement(By.xpath(logIn_Btn)).click();
+
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"roxiskil123"});
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys(new CharSequence[]{"123roxiskil"});
         driver.findElement(By.xpath("//button[text()='Log In']")).sendKeys(new CharSequence[]{Keys.ENTER});
