@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -84,11 +85,13 @@ public class FirstTest{
         ChromeOptions options = new ChromeOptions();
         options.addArguments(new String[]{"--remote-allow-origins=*"});
         ChromeDriver driver = new ChromeDriver(options);
+        String logIn_Btn = "//div[@id='loginButton']/button']";
+        String signIn_Btn = "//a[@class='menu-item log-in-button']";
 
-        driver.get("https://test.my-fork.com");
-        Thread.sleep(100);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
-        waitForDropdownToLoad.until(ExpectedConditions.visibilityOfElementLocated(logIn_Btn));
+        driver.get(this.websiteURL);
+        driver.findElement(By.xpath(logIn_Btn)).click();
+        WebDriverWait waitForDropdownToLoad = new WebDriverWait(driver,Duration.ofSeconds(20));
+        waitForDropdownToLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(logIn_Btn)));
         driver.findElement(By.xpath(logIn_Btn)).click();
 
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"roxiskil123"});
@@ -102,14 +105,20 @@ public class FirstTest{
         ChromeOptions options = new ChromeOptions();
         options.addArguments(new String[]{"--remote-allow-origins=*"});
         ChromeDriver driver = new ChromeDriver(options);
+
+        String logIn_Btn = "//div[@id='loginButton']/button']";
+        String signIn_Btn = "//a[@class='menu-item log-in-button']";
+
         driver.get(this.websiteURL);
-        Thread.sleep(1000L);
+        driver.findElement(By.xpath(logIn_Btn)).click();
+        WebDriverWait waitForDropdownToLoad = new WebDriverWait(driver,Duration.ofSeconds(20));
+        waitForDropdownToLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(logIn_Btn)));
+        driver.findElement(By.xpath(logIn_Btn)).click();
+
         driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"roxiskil123"});
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys(new CharSequence[]{"123roxiskil"});
         driver.findElement(By.xpath("//div[@id='loginButton']/button")).sendKeys(new CharSequence[]{Keys.ENTER});
-        Thread.sleep(3000L);
-        System.out.println(driver.findElement(By.xpath("//p[@text-point='login-error']/..")).getText());
     }
 
     @Test

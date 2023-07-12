@@ -13,7 +13,7 @@ public class DriverInteractions extends BaseTest{
 
     @Test
     public void test1() {
-        driver.get("http://amazon.com");
+        driver.get("https://test.my-fork.com");
         driver.navigate().refresh();
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("keyboard");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys(Keys.ENTER);
@@ -21,12 +21,10 @@ public class DriverInteractions extends BaseTest{
         System.out.println(urlToVerify);
         String pageTitle = driver.getTitle();
         System.out.println(pageTitle);
-
     }
-
     @Test
     public void test2() {
-        driver.get("http://amazon.com");
+        driver.get("https://test.my-fork.com");
         driver.switchTo().newWindow(WindowType.TAB);
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("keyboard");
         List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
@@ -38,12 +36,11 @@ public class DriverInteractions extends BaseTest{
         System.out.println(tabHandler.size());
         driver.switchTo().window(tabHandler.get(0));
         driver.switchTo().window(tabHandler.get(4));
-        driver.navigate().to("http://bestbuy.com");
+        driver.navigate().to("https://test.my-fork.com");
     }
-
     @Test
     public void test3() {
-        driver.get("http://amazon.com");
+        driver.get("https://test.my-fork.com");
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,3000)", "");
         js.executeScript("window.scrollBy(0,-2500)", "");
