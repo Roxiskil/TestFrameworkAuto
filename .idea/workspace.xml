@@ -54,7 +54,7 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.DriverInteractions.test3">
-    <configuration name="DataStoragePractise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="testcases.DataStoragePractise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testcases.DataStoragePractise" />
       <module name="TestAutomationFramework" />
       <extension name="coverage">
@@ -142,7 +142,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.DriverInteractions.test3" />
-        <item itemvalue="Application.DataStoragePractise" />
+        <item itemvalue="Application.testcases.DataStoragePractise" />
         <item itemvalue="TestNG.DriverInteractions.test1" />
         <item itemvalue="TestNG.DataStorage.data" />
         <item itemvalue="TestNG.FourLessonTest.validateEmailPasswordLogInDisplayed" />

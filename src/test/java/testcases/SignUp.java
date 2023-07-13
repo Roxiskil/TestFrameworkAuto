@@ -8,20 +8,20 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JavaAndSeleniumPractise extends BaseTest {
+public class SignUp extends BaseTest {
 
     @Test
 
     public void closeOrQuit() {
-        driver.get("http://amazon.com");
-        driver.findElement(By.xpath("//a[@data-sca-c-slot-id='nav_cs_1']")).sendKeys(Keys.chord(Keys.CONTROL, Keys.ENTER));
+        driver.get("https://test.my-fork.com");
+        driver.findElement(By.xpath("//div[@id='sign-up-button']")).sendKeys(Keys.chord(Keys.CONTROL, Keys.ENTER));
         System.out.println();
     }
 
     //homework5
     @Test
     public void dropdown() {
-        driver.get("http://amazon.com");
+        driver.get("https://test.my-fork.com");
         WebElement searchDropdownElement;
         searchDropdownElement = driver.findElement(By.id("searchDropdownBox"));
         Select searchDropdown = new Select(searchDropdownElement);
@@ -32,7 +32,7 @@ public class JavaAndSeleniumPractise extends BaseTest {
 
         }
     }
-
+}
 
 
 
