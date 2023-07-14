@@ -19,7 +19,9 @@ public class BaseTest {
 
   ErrorValidationPage errorValidationPage;
 
+  SignUpPage signUpPage;
   CheckboxPage checkboxPage;
+
 
     @BeforeTest
     public void setUp() {
@@ -33,7 +35,7 @@ public class BaseTest {
         invalidDataPage = new InvalidDataPage(driver);
         errorValidationPage = new ErrorValidationPage(driver);
         checkboxPage = new CheckboxPage(driver);
-        SignUpPage signUpPage = new SignUpPage(driver);
+        signUpPage = new SignUpPage(driver);
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));

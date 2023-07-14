@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 //homework5
-public class SignUpPage extends BaseMain{
+public class SignUpPage extends BaseMain {
 
     public SignUpPage (ChromeDriver driver){
         super(driver);
@@ -16,8 +16,14 @@ public class SignUpPage extends BaseMain{
 
 
     public void ValidateJobTitleDropdown() throws InterruptedException {
+        driver.get(websiteURL);
         driver.findElement(By.xpath(jobTitle)).isSelected();
 
+    }
+
+    public void openSignUpPage() throws InterruptedException {
+        driver.get(websiteURL);
+        driver.findElement(By.xpath(signUp_Btn)).click();
     }
 }
 

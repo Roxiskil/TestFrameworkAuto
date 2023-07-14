@@ -9,15 +9,20 @@ import java.util.List;
 
 public class HomePage extends BaseMain {
 
+    String urlBestBuy = "http://bestbuy.com";
+
+    String skuCardsLocator = "//div[@data-testid='sku-card']/a/p";
+
+    //  public void openHomePage () {
+
+
+    public void openBestBuy() {
+        driver.get(urlBestBuy);
+
+    }
     public HomePage(ChromeDriver driver) {
         super(driver);
 
-        String urlBestBuy = "http://bestbuy.com";
-
-        String skuCardsLocator = "//div[@data-testid='sku-card']/a/p";
-
-        //  public void openHomePage () {
-        driver.get(urlBestBuy);
     }
 
     public void ValidateSkuCards() {
@@ -49,7 +54,6 @@ public class HomePage extends BaseMain {
         driver.findElement(By.xpath(signIn_Btn)).click();
 
     }
-
     public void clickSignUp() throws InterruptedException {
         driver.get(websiteURL);
         Thread.sleep(2000);

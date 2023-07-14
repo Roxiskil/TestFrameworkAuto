@@ -40,9 +40,19 @@ public class DriverInteractions extends BaseTest{
     }
     @Test
     public void test3() {
-        driver.get("https://test.my-fork.com");
+        /* driver.get("https://test.my-fork.com");
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,3000)", "");
-        js.executeScript("window.scrollBy(0,-2500)", "");
+        js.executeScript("window.scrollBy(0,-2500)", ""); */
+        int pixels = 2000;
+        System.out.println("Value");
+        System.out.println("Value" + pixels);
+        pixels = 10;
+        System.out.println("Value" + pixels);
+
     }
+
+
 }
+
+

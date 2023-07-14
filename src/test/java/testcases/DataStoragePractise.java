@@ -28,7 +28,7 @@ public class DataStoragePractise {
         shoppingList.add("Pineapple");
         System.out.println(shoppingList);
 
-        List<Object> abc = new ArrayList(String);
+        /* List<Object> abc = new ArrayList(String);
         abc.add(100);
         abc.add(false);
         System.out.println(abc);
@@ -37,7 +37,7 @@ public class DataStoragePractise {
         System.out.println(abc);
         System.out.println(abc.get(0));
         System.out.println(abc.contains(false));
-        System.out.println(abc.contains(100));
+        System.out.println(abc.contains(100)); */
 
         Map<String,String> friendsWithProfessions = new HashMap<>();
         friendsWithProfessions.put("Adam", "Plumber");

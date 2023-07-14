@@ -28,8 +28,8 @@ public class DataStorage extends BaseTest {
         jobTitle.add("Senior Business Analyst");
         jobTitle.add("Designer");
 
-        System.out.println(jobTitle.contains("Designer"));
-
+        System.out.println(jobTitle);
+        System.out.println(jobTitle.size());
     }
 
 
@@ -49,8 +49,7 @@ public class DataStorage extends BaseTest {
 
 
 
-    }
-}
+
 
 
 
