@@ -14,15 +14,10 @@ public class BaseTest {
   public ChromeDriver driver;
   HomePage homePage;
   SignInPage signInPage;
-
   InvalidDataPage invalidDataPage;
-
   ErrorValidationPage errorValidationPage;
-
   SignUpPage signUpPage;
   CheckboxPage checkboxPage;
-
-
     @BeforeTest
     public void setUp() {
         // System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");

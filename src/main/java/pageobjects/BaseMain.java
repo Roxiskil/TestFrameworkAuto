@@ -19,6 +19,5 @@ public class BaseMain {
     public void a (){
         scroll(5);
     }
-
 }
 

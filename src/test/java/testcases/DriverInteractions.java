@@ -26,7 +26,7 @@ public class DriverInteractions extends BaseTest{
     public void test2() {
         driver.get("https://test.my-fork.com");
         driver.switchTo().newWindow(WindowType.TAB);
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("keyboard");
+        // driver.findElement(By.id("twotabsearchtextbox")).sendKeys("keyboard");
         List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
         System.out.println(tabHandler.size());
         driver.switchTo().newWindow(WindowType.TAB);
@@ -34,9 +34,9 @@ public class DriverInteractions extends BaseTest{
         driver.switchTo().newWindow(WindowType.TAB);
         tabHandler = new ArrayList<>(driver.getWindowHandles());
         System.out.println(tabHandler.size());
-        driver.switchTo().window(tabHandler.get(0));
+        /*driver.switchTo().window(tabHandler.get(0));
         driver.switchTo().window(tabHandler.get(4));
-        driver.navigate().to("https://test.my-fork.com");
+        driver.navigate().to("https://test.my-fork.com");*/
     }
     @Test
     public void test3() {
@@ -51,8 +51,6 @@ public class DriverInteractions extends BaseTest{
         System.out.println("Value" + pixels);
 
     }
-
-
 }
 
 
