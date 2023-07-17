@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -28,9 +29,7 @@
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/DataStorage.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/DataStoragePractise.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/SignUp.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/target/test-classes/testcases/DataStorage.class" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/target/test-classes/testcases/DataStoragePractise.class" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/target/test-classes/testcases/SignUp.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/target/classes/pageobjects/BaseMain.class" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -52,6 +51,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/GitHub/TestFrameworkAuto&quot;,
@@ -65,16 +65,20 @@
       <recent name="pageobjects" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SignUp.dropdown">
-    <configuration name="testcases.DataStoragePractise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testcases.DataStoragePractise" />
-      <module name="TestAutomationFramework" />
+  <component name="RunManager" selected="TestNG.DriverInteractions.tab">
+    <configuration name="DataStorage.roles (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.DataStorage" />
+      <option name="METHOD_NAME" value="roles" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DriverInteractions.test3" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DriverInteractions.tab" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -107,7 +111,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
       <option name="MAIN_CLASS_NAME" value="testcases.DriverInteractions" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="METHOD_NAME" value="tab" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,7 +119,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUp.dropdown (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DriverInteractions.test2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="testcases.*" />
@@ -123,8 +128,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.SignUp" />
-      <option name="METHOD_NAME" value="dropdown" />
+      <option name="MAIN_CLASS_NAME" value="testcases.DriverInteractions" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -152,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DriverInteractions.tab" />
+        <item itemvalue="TestNG.DriverInteractions.test2" />
         <item itemvalue="TestNG.SignUp.dropdown" />
+        <item itemvalue="TestNG.DataStorage.roles (1)" />
         <item itemvalue="TestNG.DataStorage.roles" />
-        <item itemvalue="TestNG.SignUp.dropdown (1)" />
-        <item itemvalue="TestNG.DriverInteractions.test3" />
-        <item itemvalue="Application.testcases.DataStoragePractise" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +192,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/testcases/DriverInteractions.java</url>
-          <line>44</line>
+          <line>55</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

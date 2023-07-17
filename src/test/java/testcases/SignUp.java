@@ -26,7 +26,7 @@ public class SignUp extends BaseTest {
         driver.get("https://test.my-fork.com");
         signUpPage = new SignUpPage(driver);
         WebElement searchDropdownElement;
-        searchDropdownElement = driver.findElement(By.id("searchDropdownBox"));
+        searchDropdownElement = driver.findElement(By.id("job-title"));
         Select searchDropdown = new Select(searchDropdownElement);
         List<WebElement> options = new ArrayList<>();
         options = searchDropdown.getOptions();

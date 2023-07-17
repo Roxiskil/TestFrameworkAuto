@@ -11,6 +11,16 @@ import java.util.List;
 
 public class DriverInteractions extends BaseTest{
 
+    //homework
+
+    @Test
+    public void tab() {
+        driver.get("https://test.my-fork.com");
+        List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.switchTo().window(tabHandler.get(0));
+    }
+
     @Test
     public void test1() {
         driver.get("https://test.my-fork.com");
@@ -34,6 +44,7 @@ public class DriverInteractions extends BaseTest{
         driver.switchTo().newWindow(WindowType.TAB);
         tabHandler = new ArrayList<>(driver.getWindowHandles());
         System.out.println(tabHandler.size());
+
         /*driver.switchTo().window(tabHandler.get(0));
         driver.switchTo().window(tabHandler.get(4));
         driver.navigate().to("https://test.my-fork.com");*/
