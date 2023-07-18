@@ -1,10 +1,13 @@
 package pageobjects;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BaseMain {
     public ChromeDriver driver;
@@ -18,6 +21,14 @@ public class BaseMain {
     }
     public void a (){
         scroll(5);
+    }
+
+    public void switchingBetweenTabAndPage(int tab){
+        driver.get("https://test.my-fork.com");
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.switchTo().newWindow(WindowType.TAB);
+        List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabHandler.get(tab));
     }
 }
 
