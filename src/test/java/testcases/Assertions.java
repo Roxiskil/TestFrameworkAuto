@@ -11,69 +11,69 @@ import java.util.List;
 //Assertion = validation
 // 2 types: Hard Assert and Soft Assert
 
+//homework AssertionsHard
 
-/*public class Assertions extends BaseTest{
-        String expectedTitle = "Amazon Clinic";
+    public class Assertions extends BaseTest {
+        String expectedTitle = "Quizzes List";
         String actualTitle;
+        String menuList = "//body/div[1]/div[2]/div[1]/nav[1]/ul[1]//li";
+        int listSizeActual;
+        int listSizeExpected = 6;
+        boolean expectedMenuItem = true;
+        boolean actualMenuItem;
+        boolean expectedAnotherMenuItem = false;
+        boolean actualAnotherMenuItem;
+
+
+        @Test
+        public void dropdown() {
+            driver.get("https://test.my-fork.com");
+            actualTitle = driver.getTitle();
+
+            Assert.assertEquals(actualTitle, expectedTitle);
+            System.out.println("title is correct");
+
+            List<WebElement> elementList = driver.findElements(By.xpath("menuList"));
+            listSizeActual = elementList.size();
+
+            Assert.assertEquals(actualMenuItem, expectedMenuItem);
+            System.out.println("Menu item is Development");
+
+            Assert.assertEquals(actualAnotherMenuItem, expectedAnotherMenuItem);
+            System.out.println("Menu item is Management");
+
+            Assert.assertNotEquals(actualTitle, expectedTitle, "Didn't match");
+            System.out.println("title is different");
+        }
+    }
+/*
+    public class Assertions extends BaseTest{
+        String expectedTitle = "Clinic";
+        String actualTitle;
+        String menuList = "//body/div[@id='a-page']/div[@id='apex-content-container']/div[@id='conditions']/div[1]/pui-section[3]/pui-tab-container[1]/ul[1]//li";
+        int listSizeActual;
+        int listSizeExpected = 8;
+
+        //Hard Assertions = asserts which fail the test
 
         @Test
     public void dropdown(){
             driver.get("https://clinic.amazon.com/?nodl=0&ref_=nav_cs_clinic");
             actualTitle = driver.getTitle();
 
-            /*Assert.assertEquals(actualTitle, expectedTitle);
-            System.out.println("title is correct");*/
+            Assert.assertEquals(actualTitle, expectedTitle);
+            System.out.println("title is correct");
 
-            /*Assert.assertNotEquals(actualTitle, expectedTitle);
+            Assert.assertNotEquals(actualTitle, expectedTitle);
             System.out.println("title is different");
-        }
 
+            List<WebElement> elementList = driver.findElements(By.xpath("menuList"));
+            listSizeActual = elementList.size();
+                    Assert.assertEquals(listSizeActual, listSizeExpected, "Didn't match");
+        }
 }
-public class Assertions1 extends BaseTest{
+*/
 
-    private String bestBuyUrl = "https://www.bestbuy.com/site/health-wellness/health-wellness-solutions/"
-    private int expectedCategoryListSize = 6;
-    private int actualCategoryListSize;
-
-    private String expectedTitleBlock1 = "Stay fit and track your progress";
-    private String expectedTitleBlock2 = "Eat well";
-    private String expectedTitleBlock3 = "Create a healthy environment";
-
-    String locatorBlock3 = "//div[]"
-    String locatorBlock2 = "//div[]"
-    String locatorBlock1 = "//div[]"
-
-
-    @Test
-    public void start(){
-        driver.get(bestBuyUrl);
-
-        List<WebElement> categorirs = driver.findElement(By.xpath(""));
-        actualCategoryListSize = categories.size();
-
-        Assert.assertEquals(actualCategoryListSize, expectedCategoryListSize);
-
-        for (WebElement element :categories) {
-            System.out.println(element.get.Text());
-        }
-
-
-    }
-    @Test
-    public void softAssers(){
-        driver.get(bestBuyUrl);
-        List<WebElement> categories = driver.findElement(By.xpath(""));
-        actualCategoryListSize = categories.size();
-
-        expectedTitleBlock1 = "Stay fit and be well";
-        actualTitleBlock1 = driver.findElement(By.xpath(""));
-
-        SoftAssert softAssert = new SoftAsser();
-
-        softAssert.assertEquals(actualCategoryListSize, expectedCategoryListSize); //int
-        softAssert.assertEquals(actualTitleBlock1, expectedCTitleBlock1); // String
-
-        softAssert.assertAll();*/
 
 
 
