@@ -15,9 +15,6 @@ public class DriverInteractions extends BaseTest{
 
     @Test
     public void switchingBetweenTabAndPage() {
-        driver.get("https://test.my-fork.com");
-        driver.switchTo().newWindow(WindowType.TAB);
-        driver.switchTo().newWindow(WindowType.TAB);
         List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabHandler.get(0));
     }

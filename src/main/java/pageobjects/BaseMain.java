@@ -24,9 +24,6 @@ public class BaseMain {
     }
 
     public void switchingBetweenTabAndPage(int tab){
-        driver.get("https://test.my-fork.com");
-        driver.switchTo().newWindow(WindowType.TAB);
-        driver.switchTo().newWindow(WindowType.TAB);
         List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabHandler.get(tab));
     }
