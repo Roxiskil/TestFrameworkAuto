@@ -2,9 +2,7 @@ package testcases;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import pageobjects.*;
 
 import java.time.Duration;
@@ -18,7 +16,7 @@ public class BaseTest {
   ErrorValidationPage errorValidationPage;
   SignUpPage signUpPage;
   CheckboxPage checkboxPage;
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
         // System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
@@ -36,7 +34,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 
     }
-    @AfterTest
+    @AfterMethod
     public void closeBrowser() {
         driver.quit();
     }

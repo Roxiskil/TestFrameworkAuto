@@ -13,6 +13,8 @@ public class AssertionsSoft extends BaseTest {
     String expectedTitle = "Quizzes";
     String actualTitle;
     String menuList = "//body/div[1]/div[2]/div[1]/nav[1]/ul[1]//li";
+    String menuItem = "//div[contains(text(),'Development')]";
+    String anotherMenuItem = "//div[contains(text(),'Project Management')]";
     int listSizeActual;
     int listSizeExpected = 6;
     boolean expectedMenuItem = true;
@@ -24,19 +26,18 @@ public class AssertionsSoft extends BaseTest {
     public void dropdown() {
         driver.get("https://test.my-fork.com");
         actualTitle = driver.getTitle();
-
         SoftAssert softAssert = new SoftAssert();
-
         softAssert.assertEquals(actualTitle, expectedTitle, "titles are different");
 
         List<WebElement> elementList = driver.findElements(By.xpath("menuList"));
         listSizeActual = elementList.size();
-
         softAssert.assertNotEquals(listSizeActual, listSizeExpected, "list size is six");
 
+        actualMenuItem = driver.findElement(By.xpath(menuItem)).isDisplayed();
         softAssert.assertEquals(actualMenuItem, expectedMenuItem);
         System.out.println("Menu item is not Development");
 
+        actualAnotherMenuItem = driver.findElement(By.xpath(anotherMenuItem)).isDisplayed();
         softAssert.assertEquals(actualAnotherMenuItem, expectedAnotherMenuItem);
         System.out.println("Menu item is Project Management");
 

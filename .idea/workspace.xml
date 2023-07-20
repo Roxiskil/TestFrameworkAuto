@@ -49,18 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/executables",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.scopes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/executables&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pageobjects" />
@@ -70,25 +70,8 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DriverInteractions.tab">
-    <configuration name="DataStorage.roles (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.DataStorage" />
-      <option name="METHOD_NAME" value="roles" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataStorage.roles" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Assertions.dropdown">
+    <configuration name="Assertions.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -97,9 +80,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.DataStorage" />
-      <option name="METHOD_NAME" value="roles" />
+      <option name="MAIN_CLASS_NAME" value="testcases.Assertions" />
+      <option name="METHOD_NAME" value="dropdown" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/runner/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -124,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DriverInteractions.test2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FourLessonTest.EmailAndPasswordFieldsAndValidateError" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -133,8 +126,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.DriverInteractions" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="MAIN_CLASS_NAME" value="testcases.FourLessonTest" />
+      <option name="METHOD_NAME" value="EmailAndPasswordFieldsAndValidateError" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -142,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUp.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -151,8 +144,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.SignUp" />
-      <option name="METHOD_NAME" value="dropdown" />
+      <option name="MAIN_CLASS_NAME" value="testcases.FourLessonTest" />
+      <option name="METHOD_NAME" value="fillInvalidEmailAndPasswordAndPressEnter" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.FourLessonTest" />
+      <option name="METHOD_NAME" value="validateRememberMeCheckboxTextSelectedByDefault" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -162,10 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DriverInteractions.test2" />
-        <item itemvalue="TestNG.SignUp.dropdown" />
-        <item itemvalue="TestNG.DataStorage.roles (1)" />
-        <item itemvalue="TestNG.DataStorage.roles" />
+        <item itemvalue="TestNG.Assertions.dropdown" />
+        <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
+        <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
+        <item itemvalue="TestNG.FourLessonTest.EmailAndPasswordFieldsAndValidateError" />
+        <item itemvalue="TestNG.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +208,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/testcases/DriverInteractions.java</url>
-          <line>56</line>
+          <line>53</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

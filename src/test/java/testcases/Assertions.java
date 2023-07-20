@@ -19,6 +19,8 @@ import java.util.List;
         String menuList = "//body/div[1]/div[2]/div[1]/nav[1]/ul[1]//li";
         int listSizeActual;
         int listSizeExpected = 6;
+        String menuItem = "//div[contains(text(),'Development')]";
+        String anotherMenuItem = "//div[contains(text(),'Project Management')]";
         boolean expectedMenuItem = true;
         boolean actualMenuItem;
         boolean expectedAnotherMenuItem = false;
@@ -29,16 +31,18 @@ import java.util.List;
         public void dropdown() {
             driver.get("https://test.my-fork.com");
             actualTitle = driver.getTitle();
-
             Assert.assertEquals(actualTitle, expectedTitle);
             System.out.println("title is correct");
 
-            List<WebElement> elementList = driver.findElements(By.xpath("menuList"));
+            List<WebElement> elementList = driver.findElements(By.xpath(menuList));
             listSizeActual = elementList.size();
+            Assert.assertEquals(listSizeActual, listSizeExpected);
 
+            actualMenuItem = driver.findElement(By.xpath(menuItem)).isDisplayed();
             Assert.assertEquals(actualMenuItem, expectedMenuItem);
             System.out.println("Menu item is Development");
 
+            actualAnotherMenuItem = driver.findElement(By.xpath(anotherMenuItem)).isDisplayed();
             Assert.assertEquals(actualAnotherMenuItem, expectedAnotherMenuItem);
             System.out.println("Menu item is Management");
 
@@ -67,7 +71,7 @@ import java.util.List;
             Assert.assertNotEquals(actualTitle, expectedTitle);
             System.out.println("title is different");
 
-            List<WebElement> elementList = driver.findElements(By.xpath("menuList"));
+            List<WebElement> elementList = driver.findElements(By.xpath(menuList));
             listSizeActual = elementList.size();
                     Assert.assertEquals(listSizeActual, listSizeExpected, "Didn't match");
         }

@@ -54,7 +54,6 @@ public class FourLessonTest extends BaseTest {
 
         homePage.clickSignUp();
 
-
     }
 }
 
