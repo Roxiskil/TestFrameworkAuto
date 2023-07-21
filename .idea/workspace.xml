@@ -70,7 +70,32 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Assertions.dropdown">
+  <component name="RunManager" selected="Maven.SeleniumProject">
+    <configuration name="SeleniumProject" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Assertions.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
@@ -91,8 +116,17 @@
     </configuration>
     <configuration name="C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/runner/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -171,10 +205,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Maven.SeleniumProject" />
+      <item itemvalue="TestNG.DriverInteractions.tab" />
+      <item itemvalue="TestNG.Assertions.dropdown" />
+      <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
+      <item itemvalue="TestNG.FourLessonTest.EmailAndPasswordFieldsAndValidateError" />
+      <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
+      <item itemvalue="TestNG.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Assertions.dropdown" />
         <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
+        <item itemvalue="TestNG.Assertions.dropdown" />
         <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
         <item itemvalue="TestNG.FourLessonTest.EmailAndPasswordFieldsAndValidateError" />
         <item itemvalue="TestNG.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" />
