@@ -70,7 +70,7 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.SeleniumProject">
+  <component name="RunManager" selected="TestNG.AssertionsSoft.dropdown">
     <configuration name="SeleniumProject" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -95,6 +95,24 @@
         </option>
       </MavenSettings>
       <method v="2" />
+    </configuration>
+    <configuration name="AssertionsSoft.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.AssertionsSoft" />
+      <option name="METHOD_NAME" value="dropdown" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Assertions.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
@@ -187,40 +205,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestAutomationFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.FourLessonTest" />
-      <option name="METHOD_NAME" value="validateRememberMeCheckboxTextSelectedByDefault" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Maven.SeleniumProject" />
       <item itemvalue="TestNG.DriverInteractions.tab" />
+      <item itemvalue="TestNG.AssertionsSoft.dropdown" />
       <item itemvalue="TestNG.Assertions.dropdown" />
       <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
       <item itemvalue="TestNG.FourLessonTest.EmailAndPasswordFieldsAndValidateError" />
       <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
-      <item itemvalue="TestNG.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
+        <item itemvalue="TestNG.AssertionsSoft.dropdown" />
         <item itemvalue="TestNG.Assertions.dropdown" />
+        <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
         <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
         <item itemvalue="TestNG.FourLessonTest.EmailAndPasswordFieldsAndValidateError" />
-        <item itemvalue="TestNG.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault" />
       </list>
     </recent_temporary>
   </component>

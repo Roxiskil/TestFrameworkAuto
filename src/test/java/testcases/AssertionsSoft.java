@@ -12,11 +12,11 @@ import java.util.List;
 public class AssertionsSoft extends BaseTest {
     String expectedTitle = "Quizzes";
     String actualTitle;
-    String menuList = "//body/div[1]/div[2]/div[1]/nav[1]/ul[1]//li";
+    String menuList = "//div[@class=\"expertise-areas-list\"]//div";
     String menuItem = "//div[contains(text(),'Development')]";
     String anotherMenuItem = "//div[contains(text(),'Project Management')]";
     int listSizeActual;
-    int listSizeExpected = 6;
+    int listSizeExpected = 5;
     boolean expectedMenuItem = true;
     boolean actualMenuItem;
     boolean expectedAnotherMenuItem = false;
@@ -24,14 +24,14 @@ public class AssertionsSoft extends BaseTest {
 
     @Test
     public void dropdown() {
-        driver.get("https://test.my-fork.com");
+        driver.get("https://test.my-fork.com/quizzes-list");
         actualTitle = driver.getTitle();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(actualTitle, expectedTitle, "titles are different");
 
-        List<WebElement> elementList = driver.findElements(By.xpath("menuList"));
+        List<WebElement> elementList = driver.findElements(By.xpath((menuList)));
         listSizeActual = elementList.size();
-        softAssert.assertNotEquals(listSizeActual, listSizeExpected, "list size is six");
+        softAssert.assertNotEquals(listSizeActual, listSizeExpected, "list size is five");
 
         actualMenuItem = driver.findElement(By.xpath(menuItem)).isDisplayed();
         softAssert.assertEquals(actualMenuItem, expectedMenuItem);

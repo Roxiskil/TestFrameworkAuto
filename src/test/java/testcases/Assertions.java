@@ -14,11 +14,11 @@ import java.util.List;
 //homework AssertionsHard
 
     public class Assertions extends BaseTest {
-        String expectedTitle = "Quizzes List";
+        String expectedTitle = "Quizzes list";
         String actualTitle;
-        String menuList = "//body/div[1]/div[2]/div[1]/nav[1]/ul[1]//li";
+        String menuList = "//div[@class=\"expertise-areas-list\"]//div";
         int listSizeActual;
-        int listSizeExpected = 6;
+        int listSizeExpected = 5;
         String menuItem = "//div[contains(text(),'Development')]";
         String anotherMenuItem = "//div[contains(text(),'Project Management')]";
         boolean expectedMenuItem = true;
@@ -29,7 +29,7 @@ import java.util.List;
 
         @Test
         public void dropdown() {
-            driver.get("https://test.my-fork.com");
+            driver.get("https://test.my-fork.com/quizzes-list");
             actualTitle = driver.getTitle();
             Assert.assertEquals(actualTitle, expectedTitle);
             System.out.println("title is correct");
@@ -46,7 +46,7 @@ import java.util.List;
             Assert.assertEquals(actualAnotherMenuItem, expectedAnotherMenuItem);
             System.out.println("Menu item is Management");
 
-            Assert.assertNotEquals(actualTitle, expectedTitle, "Didn't match");
+            Assert.assertNotEquals(actualTitle, expectedTitle, "titles match");
             System.out.println("title is different");
         }
     }
