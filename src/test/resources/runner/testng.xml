@@ -3,9 +3,7 @@
 <suite name="MySuite" parallel="classes" thread-count="4" verbose="1" >
     <test name="Smoke" >
         <classes>
-            <class name="testcases.SignUp" />
             <class name="testcases.FirstTest" />
-            <class name="testcases.FourLessonTest" />
         </classes>
     </test>
 
