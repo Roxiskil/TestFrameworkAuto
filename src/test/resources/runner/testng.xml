@@ -2,8 +2,27 @@
 
 <suite name="MySuite" parallel="classes" thread-count="4" verbose="1" >
     <test name="Smoke" >
+
+        <groups>
+            <run>
+                <include name= "sign"></include>
+                <include name="login"></include>
+                <include name="checkbox"></include>
+                <exclude name="dropbox"></exclude>
+
+            </run>
+
+        </groups>
+
         <classes>
-            <class name="testcases.FirstTest" />
+            <class name="testcases.FirstTest" >
+                <methods>
+                    <exclude name="validateEmailPasswordLogInDisplayed"></exclude>
+                    <exclude name="fillInvalidEmailAndPasswordAndPressEnter"></exclude>
+                </methods>
+            </class>
+            <class name="testcases.FourLessonTest" />
+            <class name="testcases.SignUpTest" />
         </classes>
     </test>
 

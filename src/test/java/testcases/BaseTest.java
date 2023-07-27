@@ -16,7 +16,7 @@ public class BaseTest {
   ErrorValidationPage errorValidationPage;
   SignUpPage signUpPage;
   CheckboxPage checkboxPage;
-    @BeforeMethod
+    @BeforeMethod(groups = {"sign", "login", "checkbox", "dropbox"}, alwaysRun = true)
     public void setUp() {
         // System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
@@ -34,7 +34,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 
     }
-    @AfterMethod
+    @AfterMethod(groups = {"sign", "login", "checkbox", "dropbox"}, alwaysRun = true)
     public void closeBrowser() {
         driver.quit();
     }

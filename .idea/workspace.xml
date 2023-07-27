@@ -28,7 +28,7 @@
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/BaseTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/DataStorage.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/DataStoragePractise.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/testcases/SignUp.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/testcases/SignUpTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +69,7 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FirstTest.validateRememberMeCheckboxTextSelectedByDefault">
+  <component name="RunManager" selected="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml">
     <configuration name="SeleniumProject" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -94,42 +94,6 @@
         </option>
       </MavenSettings>
       <method v="2" />
-    </configuration>
-    <configuration name="AssertionsSoft.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestAutomationFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.AssertionsSoft" />
-      <option name="METHOD_NAME" value="dropdown" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Assertions.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestAutomationFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.Assertions" />
-      <option name="METHOD_NAME" value="dropdown" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
@@ -186,7 +150,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FourLessonTest.validateEmailPasswordLogInDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -196,7 +160,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
       <option name="MAIN_CLASS_NAME" value="testcases.FourLessonTest" />
-      <option name="METHOD_NAME" value="fillInvalidEmailAndPasswordAndPressEnter" />
+      <option name="METHOD_NAME" value="validateEmailPasswordLogInDisplayed" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignUpTest.closeOrQuit" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.SignUpTest" />
+      <option name="METHOD_NAME" value="closeOrQuit" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignUpTest.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.SignUpTest" />
+      <option name="METHOD_NAME" value="dropdown" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -207,19 +207,19 @@
     <list>
       <item itemvalue="Maven.SeleniumProject" />
       <item itemvalue="TestNG.DriverInteractions.tab" />
+      <item itemvalue="TestNG.FourLessonTest.validateEmailPasswordLogInDisplayed" />
+      <item itemvalue="TestNG.SignUpTest.closeOrQuit" />
+      <item itemvalue="TestNG.SignUpTest.dropdown" />
       <item itemvalue="TestNG.FirstTest.validateRememberMeCheckboxTextSelectedByDefault" />
-      <item itemvalue="TestNG.AssertionsSoft.dropdown" />
-      <item itemvalue="TestNG.Assertions.dropdown" />
       <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
-      <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FirstTest.validateRememberMeCheckboxTextSelectedByDefault" />
-        <item itemvalue="TestNG.AssertionsSoft.dropdown" />
-        <item itemvalue="TestNG.Assertions.dropdown" />
         <item itemvalue="TestNG.C:/Users/HP/Documents/GitProjects/TestFrameworkAuto/src/test/resources/runner/testng.xml" />
-        <item itemvalue="TestNG.FourLessonTest.fillInvalidEmailAndPasswordAndPressEnter" />
+        <item itemvalue="TestNG.FourLessonTest.validateEmailPasswordLogInDisplayed" />
+        <item itemvalue="TestNG.SignUpTest.closeOrQuit" />
+        <item itemvalue="TestNG.SignUpTest.dropdown" />
+        <item itemvalue="TestNG.FirstTest.validateRememberMeCheckboxTextSelectedByDefault" />
       </list>
     </recent_temporary>
   </component>

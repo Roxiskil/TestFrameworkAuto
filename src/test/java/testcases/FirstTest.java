@@ -25,7 +25,7 @@ public class FirstTest{
     public FirstTest() {
     }
 
-    //@BeforeMethod
+    @BeforeMethod
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
@@ -79,7 +79,7 @@ public class FirstTest{
         driver.findElement(By.xpath("//div[@id='loginButton']/button")).isDisplayed();
     }
 
-    //@Test
+    @Test
     public void fillInvalidEmailAndPasswordAndPressEnter() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();

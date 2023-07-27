@@ -11,21 +11,21 @@ import pageobjects.HomePage;
 import pageobjects.SignInPage;
 
 public class FourLessonTest extends BaseTest {
-    @Test
+    @Test (priority = 1, groups = "sign")
     public void openSignInPage() throws InterruptedException {
 
         homePage.clickSignIn();
         homePage.clickSignUp();
     }
 
-    @Test
+    @Test (priority = 3, groups = "login")
     public void validateEmailPasswordLogInDisplayed() throws InterruptedException {
 
         homePage.clickSignIn();
         signInPage.fillTheSignInForm();
     }
 
-    @Test
+    //@Test
     public void fillInvalidEmailAndPasswordAndPressEnter() throws InterruptedException {
 
         homePage.clickSignIn();
@@ -34,7 +34,7 @@ public class FourLessonTest extends BaseTest {
 
     }
 
-    @Test
+    //@Test
     public void EmailAndPasswordFieldsAndValidateError() throws InterruptedException {
 
         homePage.clickSignIn();
@@ -42,14 +42,14 @@ public class FourLessonTest extends BaseTest {
         errorValidationPage.validateError();
     }
 
-    @Test
+    @Test (priority = 2, groups = "checkbox")
     public void validateRememberMeCheckboxTextSelectedByDefault() throws InterruptedException {
 
         homePage.clickSignIn();
         checkboxPage.validateRememberMeCheckbox();
     }
 
-    @Test
+    @Test (priority = 4, groups = "sign")
     public void openSignUpPage() throws InterruptedException {
 
         homePage.clickSignUp();

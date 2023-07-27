@@ -10,9 +10,9 @@ import pageobjects.SignUpPage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SignUp extends BaseTest {
+public class SignUpTest extends BaseTest {
 
-   @Test
+   @Test (priority = 2, groups = "dropdown")
 
      public void closeOrQuit() {
         driver.get("https://test.my-fork.com");
@@ -21,7 +21,7 @@ public class SignUp extends BaseTest {
     }
 
     //homework5
-    @Test
+    @Test (priority = 1, groups = "dropdown")
     public void dropdown() {
         driver.get("https://test.my-fork.com");
         signUpPage = new SignUpPage(driver);
