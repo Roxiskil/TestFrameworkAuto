@@ -8,10 +8,9 @@
                 <include name= "sign"></include>
                 <include name="login"></include>
                 <include name="checkbox"></include>
-                <exclude name="dropbox"></exclude>
-
+                <include name="dropdown"></include>
+                <exclude name="dropdown"></exclude>
             </run>
-
         </groups>
 
         <classes>
