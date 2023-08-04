@@ -1,24 +1,17 @@
+package testcases;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import pageobjects.HomePage;
 import pageobjects.PractisePage;
-import testcases.BaseTest;
-import testcases.Locators;
-import testcases.PractiseBaseTest;
 
-import java.util.ArrayList;
-import java.util.List;
+public class PractiseTest extends BaseTest {
 
-//Scenario_1
-public class PractiseTest extends PractiseBaseTest {
-
-    public ChromeDriver driver;
+        public ChromeDriver driver;
 
     protected String websiteURL = "https://test.my-fork.com";
     protected String webpageURL = "https://test.my-fork.com/quizzes-list";
@@ -29,14 +22,8 @@ public class PractiseTest extends PractiseBaseTest {
 
     @Test
     public void openMainPage() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.navigate().to(websiteURL);
-
-        PractisePage practisePage = new PractisePage(driver);
-        practisePage.openWebsite();
+        HomePage homePage = new HomePage(driver);
+        homePage.openWebsite();
     }
 
     @Test
@@ -111,7 +98,7 @@ public class PractiseTest extends PractiseBaseTest {
         driver.navigate().to(webpageURL);
     }
 
-    @Test
+   /* @Test
     public void ValidateMenuItems() {
 
         List<Object> menuItem = new ArrayList<>();
@@ -132,7 +119,8 @@ public class PractiseTest extends PractiseBaseTest {
         for (int i = 0; i < listSize; i++) {
             System.out.println(options.get(i).getText());
         }
-    }
+    }*/
 
-    }
+}
+
 

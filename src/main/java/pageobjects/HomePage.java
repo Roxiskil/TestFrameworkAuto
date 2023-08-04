@@ -9,20 +9,17 @@ import java.util.List;
 
 public class HomePage extends BaseMain {
 
-    String urlBestBuy = "http://bestbuy.com";
-
-    String skuCardsLocator = "//div[@data-testid='sku-card']/a/p";
-
-    //  public void openHomePage () {
-
-
-    public void openBestBuy() {
-        driver.get(urlBestBuy);
-
-    }
     public HomePage(ChromeDriver driver) {
         super(driver);
+    }
+    String urlBestBuy = "http://bestbuy.com";
+    String skuCardsLocator = "//div[@data-testid='sku-card']/a/p";
+    String websiteURL = "https://test.my-fork.com";
 
+    public void openHomePage () {
+
+    //public void openBestBuy() {
+        driver.get(urlBestBuy);
     }
 
     public void ValidateSkuCards() {
@@ -34,8 +31,6 @@ public class HomePage extends BaseMain {
             System.out.println(i + ": " + skuCards.get(i).getText());
         }
     }
-
-    String websiteURL = "https://test.my-fork.com";
     String signIn_Btn = "//a[@class='menu-item log-in-button']";
     String emailTxtField = "//input[@id='email']";
     String passwordTxtField = "//input[@id='password']";
@@ -48,11 +43,16 @@ public class HomePage extends BaseMain {
     String emailValue = "roxiskil@gmail.com";
     String passwordValue = "roxiskil123";
 
+    public void openWebsite() throws InterruptedException {
+
+        driver.get(websiteURL);
+        Thread.sleep(2000);
+    }
+
     public void clickSignIn() throws InterruptedException {
         driver.get(websiteURL);
         Thread.sleep(2000);
         driver.findElement(By.xpath(signIn_Btn)).click();
-
     }
     public void clickSignUp() throws InterruptedException {
         driver.get(websiteURL);
