@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="classes" name="Failed suite [MySuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="4" parallel="classes" name="Smoke(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="sign"/>
+        <include name="login"/>
+        <include name="checkbox"/>
+        <include name="dropdown"/>
+        <exclude name="dropdown"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testcases.FourLessonTest">
+        <methods>
+          <include name="validateEmailPasswordLogInDisplayed"/>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+          <include name="validateRememberMeCheckboxTextSelectedByDefault"/>
+        </methods>
+      </class> <!-- testcases.FourLessonTest -->
+    </classes>
+  </test> <!-- Smoke(failed) -->
+</suite> <!-- Failed suite [MySuite] -->

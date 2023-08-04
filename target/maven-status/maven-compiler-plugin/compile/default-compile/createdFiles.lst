@@ -1,0 +1,7 @@
+pageobjects\HomePage.class
+pageobjects\BaseMain.class
+pageobjects\SignUpPage.class
+pageobjects\CheckboxPage.class
+pageobjects\ErrorValidationPage.class
+pageobjects\InvalidDataPage.class
+pageobjects\SignInPage.class

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-MySuite" class="navigator-link">
-              <span class="suite-name border-passed">MySuite</span>
+              <span class="suite-name border-failed">MySuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-MySuite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MySuite" class="hide-methods failed suite-MySuite"> (hide)</a> <!-- hide-methods failed suite-MySuite -->
+                      <a href="#" panel-name="suite-MySuite" class="show-methods failed suite-MySuite"> (show)</a> <!-- show-methods failed suite-MySuite -->
+                    </span>
+                    <div class="method-list-content failed suite-MySuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="testcases.FourLessonTest" class="method navigator-link" hash-for-method="validateEmailPasswordLogInDisplayed">validateEmailPasswordLogInDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="testcases.FourLessonTest" class="method navigator-link" hash-for-method="validateRememberMeCheckboxTextSelectedByDefault">validateRememberMeCheckboxTextSelectedByDefault</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-MySuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +122,12 @@
                     <div class="method-list-content passed suite-MySuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-MySuite" title="testcases.FirstTest" class="method navigator-link" hash-for-method="validateRememberMeCheckboxTextSelectedByDefault">validateRememberMeCheckboxTextSelectedByDefault</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-MySuite" title="testcases.FourLessonTest" class="method navigator-link" hash-for-method="openSignInPage">openSignInPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="testcases.FourLessonTest" class="method navigator-link" hash-for-method="openSignUpPage">openSignUpPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MySuite -->
@@ -118,17 +142,100 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MySuite" class="panel MySuite">
-          <div class="suite-MySuite-class-passed">
+          <div class="suite-MySuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.FirstTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.FourLessonTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateEmailPasswordLogInDisplayed">
+                  </a> <!-- validateEmailPasswordLogInDisplayed -->
+                  <span class="method-name">validateEmailPasswordLogInDisplayed</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Build info: version: &apos;4.9.0&apos;, revision: &apos;d7057100a6&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fce9f38032298c4a0d0e3ddc0ebd7ae, findElement {using=xpath, value=//a[@class=&apos;menu-item log-in-button&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:60673}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60673/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fce9f38032298c4a0d0e3ddc0ebd7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageobjects.HomePage.clickSignIn(HomePage.java:54)
+	at testcases.FourLessonTest.validateEmailPasswordLogInDisplayed(FourLessonTest.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="validateRememberMeCheckboxTextSelectedByDefault">
                   </a> <!-- validateRememberMeCheckboxTextSelectedByDefault -->
                   <span class="method-name">validateRememberMeCheckboxTextSelectedByDefault</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Build info: version: &apos;4.9.0&apos;, revision: &apos;d7057100a6&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e378fa1e0240ccf92b60253ac5d11ac3, findElement {using=xpath, value=//a[@class=&apos;menu-item log-in-button&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:60652}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60652/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e378fa1e0240ccf92b60253ac5d11ac3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageobjects.HomePage.clickSignIn(HomePage.java:54)
+	at testcases.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault(FourLessonTest.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-failed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.FourLessonTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="openSignInPage">
+                  </a> <!-- openSignInPage -->
+                  <span class="method-name">openSignInPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openSignUpPage">
+                  </a> <!-- openSignUpPage -->
+                  <span class="method-name">openSignUpPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,8 +251,24 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;4&quot; parallel=&quot;classes&quot; name=&quot;MySuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;4&quot; parallel=&quot;classes&quot; name=&quot;Smoke&quot; verbose=&quot;0&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;sign&quot;/&gt;
+        &lt;include name=&quot;login&quot;/&gt;
+        &lt;include name=&quot;checkbox&quot;/&gt;
+        &lt;include name=&quot;dropdown&quot;/&gt;
+        &lt;exclude name=&quot;dropdown&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.FirstTest&quot;/&gt;
+      &lt;class name=&quot;testcases.FirstTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;validateEmailPasswordLogInDisplayed&quot;/&gt;
+          &lt;exclude name=&quot;fillInvalidEmailAndPasswordAndPressEnter&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.FirstTest --&gt;
+      &lt;class name=&quot;testcases.FourLessonTest&quot;/&gt;
+      &lt;class name=&quot;testcases.SignUpTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Smoke --&gt;
 &lt;/suite&gt; &lt;!-- MySuite --&gt;
@@ -159,7 +282,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Smoke (1 class)</span>
+                <span class="test-name">Smoke (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -169,6 +292,34 @@
             <span class="header-content">Groups for MySuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">checkbox</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">validateRememberMeCheckboxTextSelectedByDefault</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">login</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">validateEmailPasswordLogInDisplayed</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sign</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">openSignInPage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">openSignUpPage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-MySuite" class="panel">
@@ -185,16 +336,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateRememberMeCheckboxTextSelectedByDefault')
-data.setCell(0, 2, 'testcases.FirstTest')
-data.setCell(0, 3, 6130);
+data.setCell(0, 1, 'openSignInPage')
+data.setCell(0, 2, 'testcases.FourLessonTest')
+data.setCell(0, 3, 7865);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'openSignUpPage')
+data.setCell(1, 2, 'testcases.FourLessonTest')
+data.setCell(1, 3, 4784);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validateRememberMeCheckboxTextSelectedByDefault')
+data.setCell(2, 2, 'testcases.FourLessonTest')
+data.setCell(2, 3, 4302);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateEmailPasswordLogInDisplayed')
+data.setCell(3, 2, 'testcases.FourLessonTest')
+data.setCell(3, 3, 3160);
 window.suiteTableData['MySuite']= { tableData: data, tableDiv: 'times-div-MySuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-MySuite">
               </div> <!-- times-div-MySuite -->
             </div> <!-- times-div -->
@@ -209,9 +372,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testcases.FirstTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">validateRememberMeCheckboxTextSelectedByDefault</span>
+                <br/>
+                <span class="ignored-method-name">fillInvalidEmailAndPasswordAndPressEnter</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testcases.SignUpTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">closeOrQuit</span>
+                <br/>
+                <span class="ignored-method-name">dropdown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-MySuite" class="panel">
@@ -220,11 +401,59 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.FirstTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">validateRememberMeCheckboxTextSelectedByDefault</span>
+              <div class="chronological-class-name">testcases.FourLessonTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">openSignInPage</span>
+                <span class="method-start">2896 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">10764 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">10962 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateRememberMeCheckboxTextSelectedByDefault</span>
+                <span class="method-start">11889 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">16204 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">16352 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateEmailPasswordLogInDisplayed</span>
+                <span class="method-start">17630 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">20792 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">20925 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">openSignUpPage</span>
+                <span class="method-start">22136 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">26921 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

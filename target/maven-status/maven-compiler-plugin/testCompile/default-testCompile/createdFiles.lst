@@ -1,0 +1,12 @@
+testcases\FirstTest.class
+testcases\DataStorage.class
+testcases\SignUpTest.class
+testcases\Assertions.class
+testcases\AssertionsSoft.class
+testcases\BaseTest.class
+testcases\DataStoragePractise.class
+testcases\JavaMethodTest.class
+testcases\Locators.class
+testcases\FourLessonTest.class
+testcases\DriverInteractions.class
+testcases\JavaOOP.class

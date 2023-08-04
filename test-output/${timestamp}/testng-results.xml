@@ -1,17 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-26T18:52:33 CEST" name="MySuite" finished-at="2023-07-26T18:52:40 CEST" duration-ms="6181">
+  <suite started-at="2023-07-28T15:22:58 CEST" name="MySuite" finished-at="2023-07-28T15:23:25 CEST" duration-ms="27139">
     <groups>
+      <group name="checkbox">
+        <method signature="FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault()[pri:2, instance:testcases.FourLessonTest@3911c2a7]" name="validateRememberMeCheckboxTextSelectedByDefault" class="testcases.FourLessonTest"/>
+      </group> <!-- checkbox -->
+      <group name="sign">
+        <method signature="FourLessonTest.openSignInPage()[pri:1, instance:testcases.FourLessonTest@3911c2a7]" name="openSignInPage" class="testcases.FourLessonTest"/>
+        <method signature="FourLessonTest.openSignUpPage()[pri:4, instance:testcases.FourLessonTest@3911c2a7]" name="openSignUpPage" class="testcases.FourLessonTest"/>
+      </group> <!-- sign -->
+      <group name="login">
+        <method signature="FourLessonTest.validateEmailPasswordLogInDisplayed()[pri:3, instance:testcases.FourLessonTest@3911c2a7]" name="validateEmailPasswordLogInDisplayed" class="testcases.FourLessonTest"/>
+      </group> <!-- login -->
     </groups>
-    <test started-at="2023-07-26T18:52:33 CEST" name="Smoke" finished-at="2023-07-26T18:52:40 CEST" duration-ms="6181">
-      <class name="testcases.FirstTest">
-        <test-method signature="validateRememberMeCheckboxTextSelectedByDefault()[pri:0, instance:testcases.FirstTest@3c130745]" started-at="2023-07-26T18:52:33 CEST" name="validateRememberMeCheckboxTextSelectedByDefault" finished-at="2023-07-26T18:52:40 CEST" duration-ms="6130" status="PASS">
+    <test started-at="2023-07-28T15:22:58 CEST" name="Smoke" finished-at="2023-07-28T15:23:25 CEST" duration-ms="27139">
+      <class name="testcases.FourLessonTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:22:58 CEST" name="setUp" finished-at="2023-07-28T15:23:01 CEST" duration-ms="2894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openSignInPage()[pri:1, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:01 CEST" name="openSignInPage" finished-at="2023-07-28T15:23:09 CEST" duration-ms="7865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openSignInPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:09 CEST" name="closeBrowser" finished-at="2023-07-28T15:23:09 CEST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:09 CEST" name="setUp" finished-at="2023-07-28T15:23:10 CEST" duration-ms="926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateRememberMeCheckboxTextSelectedByDefault()[pri:2, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:10 CEST" name="validateRememberMeCheckboxTextSelectedByDefault" finished-at="2023-07-28T15:23:14 CEST" duration-ms="4302" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e378fa1e0240ccf92b60253ac5d11ac3, findElement {using=xpath, value=//a[@class='menu-item log-in-button']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:60652}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60652/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e378fa1e0240ccf92b60253ac5d11ac3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e378fa1e0240ccf92b60253ac5d11ac3, findElement {using=xpath, value=//a[@class='menu-item log-in-button']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:60652}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60652/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e378fa1e0240ccf92b60253ac5d11ac3
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at pageobjects.HomePage.clickSignIn(HomePage.java:54)
+at testcases.FourLessonTest.validateRememberMeCheckboxTextSelectedByDefault(FourLessonTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateRememberMeCheckboxTextSelectedByDefault -->
-      </class> <!-- testcases.FirstTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:14 CEST" name="closeBrowser" finished-at="2023-07-28T15:23:14 CEST" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:14 CEST" name="setUp" finished-at="2023-07-28T15:23:16 CEST" duration-ms="1278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateEmailPasswordLogInDisplayed()[pri:3, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:16 CEST" name="validateEmailPasswordLogInDisplayed" finished-at="2023-07-28T15:23:19 CEST" duration-ms="3160" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fce9f38032298c4a0d0e3ddc0ebd7ae, findElement {using=xpath, value=//a[@class='menu-item log-in-button']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:60673}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60673/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fce9f38032298c4a0d0e3ddc0ebd7ae]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fce9f38032298c4a0d0e3ddc0ebd7ae, findElement {using=xpath, value=//a[@class='menu-item log-in-button']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:60673}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60673/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fce9f38032298c4a0d0e3ddc0ebd7ae
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at pageobjects.HomePage.clickSignIn(HomePage.java:54)
+at testcases.FourLessonTest.validateEmailPasswordLogInDisplayed(FourLessonTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEmailPasswordLogInDisplayed -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:19 CEST" name="closeBrowser" finished-at="2023-07-28T15:23:19 CEST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:19 CEST" name="setUp" finished-at="2023-07-28T15:23:20 CEST" duration-ms="1210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openSignUpPage()[pri:4, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:20 CEST" name="openSignUpPage" finished-at="2023-07-28T15:23:25 CEST" duration-ms="4784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openSignUpPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FourLessonTest@3911c2a7]" started-at="2023-07-28T15:23:25 CEST" name="closeBrowser" finished-at="2023-07-28T15:23:25 CEST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testcases.FourLessonTest -->
     </test> <!-- Smoke -->
   </suite> <!-- MySuite -->
 </testng-results>
