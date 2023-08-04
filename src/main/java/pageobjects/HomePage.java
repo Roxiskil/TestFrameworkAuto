@@ -43,12 +43,6 @@ public class HomePage extends BaseMain {
     String emailValue = "roxiskil@gmail.com";
     String passwordValue = "roxiskil123";
 
-    public void openWebsite() throws InterruptedException {
-
-        driver.get(websiteURL);
-        Thread.sleep(2000);
-    }
-
     public void clickSignIn() throws InterruptedException {
         driver.get(websiteURL);
         Thread.sleep(2000);

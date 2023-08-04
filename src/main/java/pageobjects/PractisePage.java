@@ -36,10 +36,9 @@ public class PractisePage extends BaseMain {
     }
 
 
-    /*public void openWebsite() {
-
+    public void openWebsite() {
         driver.get(websiteURL);
-    }*/
+    }
 
     public void signInAndValidateHistory(){
         driver.get(websiteURL);

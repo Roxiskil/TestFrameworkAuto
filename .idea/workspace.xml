@@ -69,7 +69,7 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PractiseTest.openMainPage (1)">
+  <component name="RunManager" selected="TestNG.PractiseTest.AssertMenuItems">
     <configuration name="SeleniumProject" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -95,6 +95,24 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="Assertions.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.Assertions" />
+      <option name="METHOD_NAME" value="dropdown" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DriverInteractions.tab" type="TestNG" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
@@ -113,18 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PractiseTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestAutomationFramework" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PractiseTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PractiseTest.openMainPage (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PractiseTest.AssertMenuItems" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -134,7 +141,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
       <option name="MAIN_CLASS_NAME" value="testcases.PractiseTest" />
-      <option name="METHOD_NAME" value="openMainPage" />
+      <option name="METHOD_NAME" value="AssertMenuItems" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -142,11 +149,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PractiseTest.openMainPage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PractiseTest.ValidateMenuItems" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PractiseTest" />
-      <option name="METHOD_NAME" value="openMainPage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.PractiseTest" />
+      <option name="METHOD_NAME" value="ValidateMenuItems" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -154,11 +167,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PractiseTest.openMainPageAndCourseGallery" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PractiseTest.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PractiseTest" />
-      <option name="METHOD_NAME" value="openMainPageAndCourseGallery" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.PractiseTest" />
+      <option name="METHOD_NAME" value="dropdown" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -187,19 +206,19 @@
     <list>
       <item itemvalue="Maven.SeleniumProject" />
       <item itemvalue="TestNG.DriverInteractions.tab" />
-      <item itemvalue="TestNG.PractiseTest" />
-      <item itemvalue="TestNG.PractiseTest.openMainPage (1)" />
-      <item itemvalue="TestNG.PractiseTest.openMainPageAndCourseGallery" />
+      <item itemvalue="TestNG.Assertions.dropdown" />
+      <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
+      <item itemvalue="TestNG.PractiseTest.dropdown" />
+      <item itemvalue="TestNG.PractiseTest.ValidateMenuItems" />
       <item itemvalue="TestNG.SignUpTest.dropdown" />
-      <item itemvalue="TestNG.PractiseTest.openMainPage" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PractiseTest.openMainPage (1)" />
-        <item itemvalue="TestNG.PractiseTest.openMainPage" />
-        <item itemvalue="TestNG.PractiseTest.openMainPageAndCourseGallery" />
-        <item itemvalue="TestNG.PractiseTest" />
+        <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
+        <item itemvalue="TestNG.Assertions.dropdown" />
+        <item itemvalue="TestNG.PractiseTest.dropdown" />
         <item itemvalue="TestNG.SignUpTest.dropdown" />
+        <item itemvalue="TestNG.PractiseTest.ValidateMenuItems" />
       </list>
     </recent_temporary>
   </component>

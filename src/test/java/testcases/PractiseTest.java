@@ -2,16 +2,21 @@ package testcases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageobjects.HomePage;
 import pageobjects.PractisePage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PractiseTest extends BaseTest {
 
-        public ChromeDriver driver;
+    public ChromeDriver driver;
 
     protected String websiteURL = "https://test.my-fork.com";
     protected String webpageURL = "https://test.my-fork.com/quizzes-list";
@@ -19,11 +24,14 @@ public class PractiseTest extends BaseTest {
     String history_Btn = "//a[@class='quiz-section-history-button']";
     boolean expectedHistory = false;
     boolean actualHistory;
+    String areaOfExpertise = "///div[@class=\"expertise-areas-list\"]//div";
+    int areaOfExpertiseSizeActual;
+    int areaOfExpertiseSizeExpected = 5;
 
     @Test
     public void openMainPage() {
-        HomePage homePage = new HomePage(driver);
-        homePage.openWebsite();
+        PractisePage practisePage = new PractisePage(driver);
+        practisePage.openWebsite();
     }
 
     @Test
@@ -98,7 +106,7 @@ public class PractiseTest extends BaseTest {
         driver.navigate().to(webpageURL);
     }
 
-   /* @Test
+    @Test
     public void ValidateMenuItems() {
 
         List<Object> menuItem = new ArrayList<>();
@@ -110,17 +118,15 @@ public class PractiseTest extends BaseTest {
 
         System.out.println(menuItem);
         System.out.println(menuItem.size());
+    }
 
-        searchDropdownElement = driver.findElement(By.id("job-title"));
-        Select searchDropdown = new Select(searchDropdownElement);
-        List<WebElement> options = new ArrayList<>();
-        options = searchDropdown.getOptions();
-        int listSize = options.size();
-        for (int i = 0; i < listSize; i++) {
-            System.out.println(options.get(i).getText());
-        }
-    }*/
-
+    @Test
+    public void AssertMenuItems() {
+        driver.get("https://test.my-fork.com/quizzes-list");
+        List<WebElement> elementList = driver.findElements(By.xpath(areaOfExpertise));
+        areaOfExpertiseSizeActual = elementList.size();
+        Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
+    }
 }
-
+//Scenario_3
 
