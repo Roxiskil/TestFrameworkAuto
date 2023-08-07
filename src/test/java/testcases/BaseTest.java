@@ -19,6 +19,7 @@ public class BaseTest {
   CheckboxPage checkboxPage;
 
   PractisePage practisePage;
+  BestBuyMainPage bestBuyMainPage;
     @BeforeMethod(groups = {"sign", "login", "checkbox", "dropbox"}, alwaysRun = true)
     public void setUp() {
         // System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
@@ -34,6 +35,7 @@ public class BaseTest {
         checkboxPage = new CheckboxPage(driver);
         signUpPage = new SignUpPage(driver);
         practisePage = new PractisePage(driver);
+        bestBuyMainPage = new BestBuyMainPage(driver);
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));

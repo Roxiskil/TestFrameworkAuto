@@ -5,12 +5,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageobjects.HomePage;
 import pageobjects.PractisePage;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +22,7 @@ public class PractiseTest extends BaseTest {
 
     protected String websiteURL = "https://test.my-fork.com";
     protected String webpageURL = "https://test.my-fork.com/quizzes-list";
+
     String history = "//div[@id='bodyInfoPopup']";
     String history_Btn = "//a[@class='quiz-section-history-button']";
     boolean expectedHistory = false;
@@ -27,32 +30,26 @@ public class PractiseTest extends BaseTest {
     String areaOfExpertise = "///div[@class=\"expertise-areas-list\"]//div";
     int areaOfExpertiseSizeActual;
     int areaOfExpertiseSizeExpected = 5;
+    String questionsSQL101 = "//a[@href='/quiz/run/9']";
+    int questionsNumberActual;
+    int questionsNumberExpected = 9;
+    String startBtn = "//a[@href='/quiz/run/9']//div";
+    String firstQuestionAnswer = "//div[@data-answer-id='3']";
+    String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
 
     @Test
     public void openMainPage() {
-        PractisePage practisePage = new PractisePage(driver);
         practisePage.openWebsite();
     }
-
     @Test
-    public void openCourseGallery() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.navigate().to(webpageURL);
-
-        PractisePage practisePage = new PractisePage(driver);
-        practisePage.openCourseGallery();
+    public void openCourseGalleryPage() {
+        practisePage.openWebsite();
+        practisePage.openCourseGalleryPage();
     }
-
     @Test
     public void validateHistoryUnavailable() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.navigate().to(webpageURL);
+        practisePage.openWebsite();
+        practisePage.signInAndValidateHistory();
 
         PractisePage practisePage = new PractisePage(driver);
         practisePage.historyUnavailable();
@@ -62,50 +59,22 @@ public class PractiseTest extends BaseTest {
         System.out.println("This functionality is unavailable");
         softAssert.assertAll();
     }
-
     @Test
-    public void returnMainPage() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.navigate().to(websiteURL);
-        PractisePage practisePage = new PractisePage(driver);
-        practisePage.returnMainPage();
-        driver.navigate().to(websiteURL);
+    public void returnMainPageAfterLogIn() {
+        practisePage.returnMainPageAfterLogIn();
     }
-
     @Test
-    public void signInAndValidateHistory() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.navigate().to(websiteURL);
-        driver.findElement(By.xpath("//a[@class='menu-item log-in-button']")).click();
-        driver.findElement(By.xpath("//input[@id='email']")).sendKeys(new CharSequence[]{"testing@my-fork.com"});
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(new CharSequence[]{"Password"});
-        driver.findElement(By.xpath("//div[@id='loginButton']/button")).sendKeys(new CharSequence[]{Keys.ENTER});
-
-        driver.navigate().to(webpageURL);
-        System.out.println(driver.findElement(By.xpath(history_Btn)).isDisplayed());
-
-       /* PractisePage practisePage = new PractisePage(driver);
+    public void validateHistoryAgain() {
         practisePage.openWebsite();
-        practisePage.signInAndValidateHistory();*/
+        practisePage.openCourseGalleryPage();
+        practisePage.validateHistoryAgain();
     }
 
     //Scenario_2
     @Test
     public void openMainPageAndCourseGallery() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.navigate().to(websiteURL);
-        driver.navigate().to(webpageURL);
+        practisePage.openMainPageAndCourseGallery();
     }
-
     @Test
     public void ValidateMenuItems() {
 
@@ -127,6 +96,64 @@ public class PractiseTest extends BaseTest {
         areaOfExpertiseSizeActual = elementList.size();
         Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
     }
+
+/*Scenario_3
+        Validate that the progress bar now has the correct value (correct value = number of answered questions / total number of questions)
+        Click the “Next” button
+        Validate progress bar has changed value
+        Validate new changed value is correct*/
+
+    @Test
+    public void openMainPageThenCourseGallery() {
+        practisePage.openMainPageThenCourseGallery();
+    }
+    @Test
+    public void questionsNumberInSQL101Basic() {
+        driver.get(this.webpageURL);
+        List<WebElement> elementList = driver.findElements(By.xpath(questionsSQL101));
+        questionsNumberActual = elementList.size();
+        Assert.assertEquals(questionsNumberActual, questionsNumberExpected);
+    }
+    @Test
+    public void clickStartButton() {
+        driver.get(this.webpageURL);
+        driver.findElement(By.xpath(startBtn)).click();
+    }
+    @Test
+    public void selectAnswerForFirstQuestion() {
+        driver.get(this.webpageURL);
+        driver.findElement(By.xpath(startBtn)).click();
+        driver.findElement(By.xpath(firstQuestionAnswer)).click();
+    }
+    @Test
+    public void validateNumberOfAnsweredQuestionsAndTotalNumber() {
+        practisePage.openWebsite();
+        practisePage.openCourseGallery();
+        practisePage.numberOfAnsweredQuestions();
+    }
+    @Test
+    public void clickNextButton() {
+        practisePage.openWebsite();
+        practisePage.openCourseGallery();
+        driver.findElement(By.xpath(nextBtn)).click();
+    }
+    //@Test
+    public void validateProgressBarValueChanged() {
+        practisePage.openWebsite();
+        practisePage.openCourseGallery();
+
+    }
+    //@Test
+    public void validateNewChangedValueIsCorrect() {
+        practisePage.openWebsite();
+        practisePage.openCourseGallery();
+
+
+    }
 }
-//Scenario_3
+
+
+
+
+
 
