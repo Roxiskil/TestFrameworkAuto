@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 import java.time.Duration;
 import java.util.List;
 
@@ -25,13 +26,16 @@ public class PractisePage extends BaseMain {
     String emailField = "//input[@id='email']";
     String passwordField = "//input[@id='password']";
     String logIn_Btn = "//div[@id='loginButton']/button']";
+    String startBtn = "//a[@href='/quiz/run/9']//div";
+    String firstQuestionAnswer = "//div[@data-answer-id='3']";
+    String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
 
-    //values:
     String emailValue = "testing@my-fork.com";
     String passwordValue = "Password";
     String domain = "https://test.my-fork.com/";
     String URL = domain + "quiz/661";
     By numberOfAnsweredQuestions = By.xpath("//div[@class='quiz-process-progress-bar']");
+
 
 // scenario 1
     public void openCourseGallery() {
@@ -107,26 +111,67 @@ public class PractisePage extends BaseMain {
         return driver.findElements(numberOfAnsweredQuestions).size();
     }
     public void validateNumberOfAnsweredQuestionsAndTotalNumber() {
-        dev.failsafe.internal.util.Assert.assertEquals(validateNumberOfAnsweredQuestionsAndTotalNumber(), 1);
+    }
+        Assert.assertEquals(validateNumberOfAnsweredQuestionsAndTotalNumber(), 1);
 
         for (int i = 0; i < 9; i++) {
             System.out.println("iteration number: " + i);
             scrollBy(1600);
             waitForNumberOfAnsweredQuestions(i);
-            dev.failsafe.internal.util.Assert.assertEquals(numberOfAnsweredQuestions(), i);
+            Assert.assertEquals(numberOfAnsweredQuestions(), i);
         }
-    }
-    // scenario 3
+        // scenario 3
+        public void openMainPageAndCourseGallery () {
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments(new String[]{"--remote-allow-origins=*"});
+            ChromeDriver driver = new ChromeDriver(options);
+            driver.navigate().to(websiteURL);
+            driver.navigate().to(webpageURL);
+        }
+        public void questionsNumberInSQL101Basic () {
+            driver.get(this.webpageURL);
+            List<WebElement> elementList = driver.findElements(By.xpath(questionsSQL101));
+            questionsNumberActual = elementList.size();
+            Assert.assertEquals(questionsNumberActual, questionsNumberExpected);
+        }
+        public void clickStartButton() {
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments(new String[]{"--remote-allow-origins=*"});
+            ChromeDriver driver = new ChromeDriver(options);
+            driver.get(this.webpageURL);
+            driver.findElement(By.xpath(startBtn)).click();
+        }
+        public void selectAnswerForFirstQuestion () {
+            driver.get(this.webpageURL);
+            driver.findElement(By.xpath(startBtn)).click();
+            driver.findElement(By.xpath(firstQuestionAnswer)).click();
+        }
 
-    public void openMainPageThenCourseGallery() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.navigate().to(websiteURL);
-        driver.navigate().to(webpageURL);
-    }
+        public void clickNextButton(){
+            driver.get(this.webpageURL);
+            driver.findElement(By.xpath(nextBtn)).click();
+        }
 
-    }
+        public void validateProgressBarValueChanged() {
+                scrollBy(5000);
+                try {
+                    waitForNumberOfAnsweredQuestions(2);
+                    Assert.assertEquals(numberOfAnsweredQuestions(), 9);
+                } catch (Exception e) {
+                    Assert.assertEquals(numberOfAnsweredQuestions(), 9);
+                }
+            }
+            public String validateNewChangedValueIsCorrect (String progressBar){
+                System.out.println(progressBar);
+                String result = progressBar.substring(1, progressBar.indexOf("9"));
+                String totalNumberOfQuestions = "9";
+                int questionAnswered = Integer.parseInt(totalNumberOfQuestions);
+                System.out.println(questionAnswered+8);
+                return result;
+            }
+        }
+
 
 

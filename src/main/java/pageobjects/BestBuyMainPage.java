@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class BestBuyMainPage extends BaseMain {
-    public BestBuyMainPagePage(WebDriver driver) {
+    public BestBuyMainPage(WebDriver driver) {
         super(driver);
     }
     String domain = "https://www.bestbuy.com/";

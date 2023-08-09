@@ -36,7 +36,6 @@ public class PractiseTest extends BaseTest {
     String startBtn = "//a[@href='/quiz/run/9']//div";
     String firstQuestionAnswer = "//div[@data-answer-id='3']";
     String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
-
     @Test
     public void openMainPage() {
         practisePage.openWebsite();
@@ -88,7 +87,6 @@ public class PractiseTest extends BaseTest {
         System.out.println(menuItem);
         System.out.println(menuItem.size());
     }
-
     @Test
     public void AssertMenuItems() {
         driver.get("https://test.my-fork.com/quizzes-list");
@@ -97,15 +95,10 @@ public class PractiseTest extends BaseTest {
         Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
     }
 
-/*Scenario_3
-        Validate that the progress bar now has the correct value (correct value = number of answered questions / total number of questions)
-        Click the “Next” button
-        Validate progress bar has changed value
-        Validate new changed value is correct*/
-
+//Scenario_3
     @Test
     public void openMainPageThenCourseGallery() {
-        practisePage.openMainPageThenCourseGallery();
+        practisePage.openMainPageAndCourseGallery();
     }
     @Test
     public void questionsNumberInSQL101Basic() {
@@ -135,22 +128,24 @@ public class PractiseTest extends BaseTest {
     public void clickNextButton() {
         practisePage.openWebsite();
         practisePage.openCourseGallery();
-        driver.findElement(By.xpath(nextBtn)).click();
+        practisePage.clickNextButton();
     }
-    //@Test
+
+    @Test
     public void validateProgressBarValueChanged() {
         practisePage.openWebsite();
         practisePage.openCourseGallery();
-
+        practisePage.validateProgressBarValueChanged();
     }
-    //@Test
+
+    @Test
     public void validateNewChangedValueIsCorrect() {
         practisePage.openWebsite();
         practisePage.openCourseGallery();
-
-
+        practisePage.validateNewChangedValueIsCorrect();
     }
-}
+    }
+
 
 
 

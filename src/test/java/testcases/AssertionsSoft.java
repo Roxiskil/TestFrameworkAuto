@@ -22,7 +22,7 @@ public class AssertionsSoft extends BaseTest {
     boolean expectedAnotherMenuItem = false;
     boolean actualAnotherMenuItem;
 
-    @Test
+   @Test
     public void dropdown() {
         driver.get("https://test.my-fork.com/quizzes-list");
         actualTitle = driver.getTitle();
