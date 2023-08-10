@@ -1,12 +1,15 @@
 package pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.logging.Logger;
 
 public class CheckboxPage extends BaseMain {
 
-    public CheckboxPage(ChromeDriver driver) {
-        super(driver);
+    public CheckboxPage(WebDriver driver, Logger log) {
+        super(driver, log);
     }
 
     String logIn_Btn = "//div[@id='loginButton']/button']";

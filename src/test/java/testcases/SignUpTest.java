@@ -21,7 +21,7 @@ public class SignUpTest extends BaseTest {
     }
 
     //homework5
-    @Test (priority = 1, groups = "dropdown")
+    /*@Test (priority = 1, groups = "dropdown")
     public void dropdown() {
         driver.get("https://test.my-fork.com");
         signUpPage = new SignUpPage(driver);
@@ -34,7 +34,7 @@ public class SignUpTest extends BaseTest {
         for (int i = 0; i < listSize; i++) {
             System.out.println(options.get(i).getText());
         }
-    }
+    }*/
 
 }
 

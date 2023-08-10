@@ -2,15 +2,17 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class HomePage extends BaseMain {
 
-    public HomePage(ChromeDriver driver) {
-        super(driver);
+    public HomePage (WebDriver driver, Logger log) {
+        super(driver, log);
     }
     String urlBestBuy = "http://bestbuy.com";
     String skuCardsLocator = "//div[@data-testid='sku-card']/a/p";

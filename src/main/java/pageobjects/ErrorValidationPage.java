@@ -2,12 +2,15 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.logging.Logger;
 
 public class ErrorValidationPage extends BaseMain {
 
-    public ErrorValidationPage(ChromeDriver driver) {
-        super(driver);
+    public ErrorValidationPage(WebDriver driver, Logger log) {
+        super(driver, log);
     }
 
     String emailTxtField = "//input[@id='email']";

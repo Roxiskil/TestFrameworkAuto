@@ -20,15 +20,15 @@ public class BestBuyMainPageTest extends BaseTest {
         bestBuyMainPage.suggestedItemSectionCount();
     }
 
-    @Test
-    public void sss() {
-        bestBuyMainPage.openMainPage();
-        bestBuyMainPage.aa();
+    //@Test
+    //public void sss() {
+      //  bestBuyMainPage.openMainPage();
+       // bestBuyMainPage.aa();
     }
 
-    @Test
-    public void sss() {
-        System.out.println(bestBuyMainPage.substringLastName("Roksolana_Stef"));
-    }
-}
+    //@Test
+    //public void sss() {
+        //System.out.println(bestBuyMainPage.substringLastName("Roksolana_Stef"));
+
+
 

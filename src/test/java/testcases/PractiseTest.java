@@ -36,20 +36,22 @@ public class PractiseTest extends BaseTest {
     String startBtn = "//a[@href='/quiz/run/9']//div";
     String firstQuestionAnswer = "//div[@data-answer-id='3']";
     String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
+
     @Test
     public void openMainPage() {
         practisePage.openWebsite();
     }
+
     @Test
     public void openCourseGalleryPage() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
     }
+
     @Test
     public void validateHistoryUnavailable() {
         practisePage.openWebsite();
         practisePage.signInAndValidateHistory();
-
         PractisePage practisePage = new PractisePage(driver);
         practisePage.historyUnavailable();
         expectedHistory = driver.findElement(By.xpath(history)).isDisplayed();
@@ -58,7 +60,6 @@ public class PractiseTest extends BaseTest {
         System.out.println("This functionality is unavailable");
         softAssert.assertAll();
     }
-    @Test
     public void returnMainPageAfterLogIn() {
         practisePage.returnMainPageAfterLogIn();
     }
@@ -71,84 +72,60 @@ public class PractiseTest extends BaseTest {
 
     //Scenario_2
     @Test
-    public void openMainPageAndCourseGallery() {
-        practisePage.openMainPageAndCourseGallery();
-    }
-    @Test
     public void ValidateMenuItems() {
-
+        practisePage.openWebsite();
+        practisePage.openCourseGalleryPage();
         List<Object> menuItem = new ArrayList<>();
         menuItem.add("Development");
         menuItem.add("Testing");
         menuItem.add("Business Analysis");
         menuItem.add("Agile");
-        menuItem.add("Project Management");
-
+        menuItem.add("Project Management")
         System.out.println(menuItem);
         System.out.println(menuItem.size());
     }
     @Test
     public void AssertMenuItems() {
-        driver.get("https://test.my-fork.com/quizzes-list");
+        practisePage.openWebsite();
+        practisePage.openCourseGalleryPage();
         List<WebElement> elementList = driver.findElements(By.xpath(areaOfExpertise));
         areaOfExpertiseSizeActual = elementList.size();
         Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
     }
+    //Scenario_3
 
-//Scenario_3
+        @Test
+        public void questionsNumberInSQL101Basic() {
+            practisePage.openWebsite();
+            practisePage.openCourseGalleryPage();
+            List<WebElement> elementList = driver.findElements(By.xpath(questionsSQL101));
+            questionsNumberActual = elementList.size();
+            Assert.assertEquals(questionsNumberActual, questionsNumberExpected);
+        }
     @Test
-    public void openMainPageThenCourseGallery() {
-        practisePage.openMainPageAndCourseGallery();
-    }
-    @Test
-    public void questionsNumberInSQL101Basic() {
-        driver.get(this.webpageURL);
-        List<WebElement> elementList = driver.findElements(By.xpath(questionsSQL101));
-        questionsNumberActual = elementList.size();
-        Assert.assertEquals(questionsNumberActual, questionsNumberExpected);
-    }
-    @Test
-    public void clickStartButton() {
-        driver.get(this.webpageURL);
+        public void clickStartButton() {
+        practisePage.openWebsite();
+        practisePage.openCourseGalleryPage();
         driver.findElement(By.xpath(startBtn)).click();
-    }
-    @Test
-    public void selectAnswerForFirstQuestion() {
-        driver.get(this.webpageURL);
-        driver.findElement(By.xpath(startBtn)).click();
-        driver.findElement(By.xpath(firstQuestionAnswer)).click();
-    }
-    @Test
-    public void validateNumberOfAnsweredQuestionsAndTotalNumber() {
-        practisePage.openWebsite();
-        practisePage.openCourseGallery();
-        practisePage.numberOfAnsweredQuestions();
-    }
-    @Test
-    public void clickNextButton() {
-        practisePage.openWebsite();
-        practisePage.openCourseGallery();
-        practisePage.clickNextButton();
-    }
+        }
+        public void selectAnswerForFirstQuestion () {
+            driver.findElement(By.xpath(firstQuestionAnswer)).click();
+        }
 
     @Test
-    public void validateProgressBarValueChanged() {
-        practisePage.openWebsite();
-        practisePage.openCourseGallery();
-        practisePage.validateProgressBarValueChanged();
-    }
-
+        public void validateNumberOfAnsweredQuestionsAndTotalNumber () {
+            practisePage.openWebsite();
+            practisePage.openCourseGallery();
+            practisePage.numberOfAnsweredQuestions();
+            practisePage.clickNextButton();
+        }
     @Test
-    public void validateNewChangedValueIsCorrect() {
-        practisePage.openWebsite();
-        practisePage.openCourseGallery();
-        practisePage.validateNewChangedValueIsCorrect();
+        public void validateProgressBarValueChanged () {
+            practisePage.openWebsite();
+            practisePage.openCourseGallery();
+            practisePage.validateProgressBarValueChanged();
+            practisePage.validateNewChangedValueIsCorrect();
+        }
+
     }
-    }
-
-
-
-
-
-
-
+}

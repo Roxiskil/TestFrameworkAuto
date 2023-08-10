@@ -69,7 +69,7 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll">
+  <component name="RunManager" selected="TestNG.SignInTest.test">
     <configuration name="SeleniumProject" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -185,7 +185,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpTest.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SignInTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -194,8 +194,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.SignUpTest" />
-      <option name="METHOD_NAME" value="dropdown" />
+      <option name="MAIN_CLASS_NAME" value="testcases.SignInTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -206,19 +206,19 @@
     <list>
       <item itemvalue="Maven.SeleniumProject" />
       <item itemvalue="TestNG.DriverInteractions.tab" />
+      <item itemvalue="TestNG.SignInTest.test" />
       <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
       <item itemvalue="TestNG.Assertions.dropdown" />
       <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
       <item itemvalue="TestNG.PractiseTest.dropdown" />
-      <item itemvalue="TestNG.SignUpTest.dropdown" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SignInTest.test" />
         <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
         <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
         <item itemvalue="TestNG.Assertions.dropdown" />
         <item itemvalue="TestNG.PractiseTest.dropdown" />
-        <item itemvalue="TestNG.SignUpTest.dropdown" />
       </list>
     </recent_temporary>
   </component>
@@ -254,5 +254,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TestFrameworkAuto$SignInTest_test.ic" NAME="SignInTest.test Coverage Results" MODIFIED="1691686107054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>testcases.*</FILTER>
+    </SUITE>
   </component>
 </project>

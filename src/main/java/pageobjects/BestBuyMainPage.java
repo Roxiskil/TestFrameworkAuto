@@ -9,10 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class BestBuyMainPage extends BaseMain {
-    public BestBuyMainPage(WebDriver driver) {
-        super(driver);
+    public BestBuyMainPage(WebDriver driver, Logger log) {
+        super(driver, log);
     }
     String domain = "https://www.bestbuy.com/";
     By suggestedItemSection = By.xpath("//ul[@class=''c-carousel-list']");
@@ -25,7 +26,7 @@ public class BestBuyMainPage extends BaseMain {
     public int suggestedItemSectionCount() {
             return driver.findElements(suggestedItemSection).size();
     }
-    public void suggestedItemSectionScrollAndCount() {
+    /*public void suggestedItemSectionScrollAndCount() {
         Assert.assertEquals(suggestedItemSectionScrollAndCount(), 1);
 
         for (int i = 2; i < 5; i++) {
@@ -52,7 +53,7 @@ public class BestBuyMainPage extends BaseMain {
             sectionWait.until(ExpectedConditions.numberOfElementsToBe(suggestedItemSection, 2));
         }
 
-        public void scrollToEndAndVerify4Sections () {
+        /*public void scrollToEndAndVerify4Sections () {
             scrollBy(5000);
             try {
                 waitForSuggestItemSection(5);
@@ -73,6 +74,6 @@ public class BestBuyMainPage extends BaseMain {
             System.out.println(fullName);
             Srting result = fullName.substring(0, fullName.indexOf("_"));
             return result;
-        }
+        }*/
     }
-}
+
