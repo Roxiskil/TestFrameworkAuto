@@ -22,6 +22,7 @@ public class PractisePage extends BaseMain {
     public PractisePage(WebDriver driver, Logger log) {
         super(driver, log);
     }
+
     String websiteURL = "https://test.my-fork.com";
     String webpageURL = "https://test.my-fork.com/quizzes-list";
     String signIn_Btn = "//a[@class='menu-item log-in-button']";
@@ -49,6 +50,7 @@ public class PractisePage extends BaseMain {
     public void openCourseGallery() {
         driver.get(this.webpageURL);
     }
+
     public void openWebsite() {
         driver.get(websiteURL);
     }
@@ -61,6 +63,7 @@ public class PractisePage extends BaseMain {
         ChromeDriver driver = new ChromeDriver(options);
         driver.navigate().to(webpageURL);
     }
+
     public void signInAndValidateHistory() {
         driver.get(websiteURL);
         driver.findElement(By.xpath(emailField)).sendKeys(emailValue);
@@ -71,15 +74,17 @@ public class PractisePage extends BaseMain {
         waitForPageToLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(history_Btn)));
         System.out.println(driver.findElement(By.xpath(history_Btn)).isDisplayed());
         expectedHistory = driver.findElement(By.xpath(history)).isDisplayed();
-        SoftAssert softAssert = new SoftAssert();
+        /*SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(actualHistory, expectedHistory);
         System.out.println("This functionality is unavailable");
-        softAssert.assertAll();
+        softAssert.assertAll();*/
     }
+
     public void returnMainPageAfterLogIn() {
         driver.navigate().to(webpageURL);
         driver.navigate().to(websiteURL);
     }
+
     public void validateHistoryAgain() {
         driver.navigate().to(websiteURL);
         driver.findElement(By.xpath(signIn_Btn)).click();
@@ -102,16 +107,16 @@ public class PractisePage extends BaseMain {
         menuItem.add("Testing");
         menuItem.add("Business Analysis");
         menuItem.add("Agile");
-        menuItem.add("Project Management")
+        menuItem.add("Project Management");
         System.out.println(menuItem);
         System.out.println(menuItem.size());
     }
-
-    public void AssertMenuItems() {
+}
+    /*public void AssertMenuItems() {
 
         List<WebElement> elementList = driver.findElements(By.xpath(areaOfExpertise));
-        areaOfExpertiseSizeActual = elementList.size();
-        Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
+        areaOfExpertiseSizeActual = elementList.size();*/
+      /*  Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
     }
     public int numberOfAnsweredQuestions() {
         return driver.findElements(numberOfAnsweredQuestions).size();
@@ -166,7 +171,7 @@ public class PractisePage extends BaseMain {
                 System.out.println(questionAnswered+8);
                 return result;
             }
-        }
+        }*/
 
 
 

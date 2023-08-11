@@ -1,0 +1,6 @@
+серп. 11, 2023 11:51:36 ПП testcases.BaseTest saveLogs
+INFO: This is the beginning of the test suit
+серп. 11, 2023 11:51:39 ПП pageobjects.BaseMain typeUsingXpath
+INFO: Value: roxiskil@gmail.com was successfully entered into email text fieldelement
+серп. 11, 2023 11:51:39 ПП pageobjects.BaseMain typeUsingXpath
+INFO: Value: roxiskil123 was successfully entered into password text fieldelement

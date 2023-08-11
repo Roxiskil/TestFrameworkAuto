@@ -167,7 +167,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PractiseTest.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SignInTest.fillTheSignInForm" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -176,8 +176,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.PractiseTest" />
-      <option name="METHOD_NAME" value="dropdown" />
+      <option name="MAIN_CLASS_NAME" value="testcases.SignInTest" />
+      <option name="METHOD_NAME" value="fillTheSignInForm" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -206,19 +206,19 @@
     <list>
       <item itemvalue="Maven.SeleniumProject" />
       <item itemvalue="TestNG.DriverInteractions.tab" />
+      <item itemvalue="TestNG.SignInTest.fillTheSignInForm" />
       <item itemvalue="TestNG.SignInTest.test" />
       <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
       <item itemvalue="TestNG.Assertions.dropdown" />
       <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
-      <item itemvalue="TestNG.PractiseTest.dropdown" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.SignInTest.test" />
+        <item itemvalue="TestNG.SignInTest.fillTheSignInForm" />
         <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
         <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
         <item itemvalue="TestNG.Assertions.dropdown" />
-        <item itemvalue="TestNG.PractiseTest.dropdown" />
       </list>
     </recent_temporary>
   </component>

@@ -28,8 +28,8 @@ public class BaseTest {
   BestBuyMainPage bestBuyMainPage;
     @BeforeMethod(groups = {"sign", "login", "checkbox", "dropbox"}, alwaysRun = true)
     public void setUp() throws IOException {
-        // System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        // System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitProjects\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitProjects\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
@@ -43,10 +43,8 @@ public class BaseTest {
         signUpPage = new SignUpPage(driver, log);
         practisePage = new PractisePage(driver, log);
         bestBuyMainPage = new BestBuyMainPage(driver, log);
-
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
-
     }
     @AfterMethod(groups = {"sign", "login", "checkbox", "dropbox"}, alwaysRun = true)
     public void closeBrowser() {
@@ -55,7 +53,7 @@ public class BaseTest {
 
     public void saveLogs(Logger log) throws IOException {
         FileHandler fileHandler;
-        fileHandler = new FileHandler("C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\MyLogs.log");
+        fileHandler = new FileHandler("C:\\Users\\HP\\Documents\\GitProjects\\TestFrameworkAuto\\MyLogs.log");
         log.addHandler(fileHandler);
         SimpleFormatter formatter = new SimpleFormatter();
         fileHandler.setFormatter(formatter);

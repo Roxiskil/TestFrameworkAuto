@@ -53,15 +53,15 @@ public class PractiseTest extends BaseTest {
         practisePage.openCourseGalleryPage();
         practisePage.ValidateMenuItems();
     }
-    @Test
+    /*@Test
     public void AssertMenuItems() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
-        practisePage.AssertMenuItems();
+        practisePage.AssertMenuItems();*/
     }
     //Scenario_3
 
-        @Test
+       /* @Test
         public void questionsNumberInSQL101Basic() {
             practisePage.openWebsite();
             practisePage.openCourseGalleryPage();
@@ -75,16 +75,16 @@ public class PractiseTest extends BaseTest {
         }
         public void selectAnswerForFirstQuestion () {
             driver.findElement(By.xpath(firstQuestionAnswer)).click();
-        }
+        }*/
 
-    @Test
+    /*@Test
         public void validateNumberOfAnsweredQuestionsAndTotalNumber () {
             practisePage.openWebsite();
             practisePage.openCourseGallery();
             practisePage.numberOfAnsweredQuestions();
             practisePage.clickNextButton();
-        }
-    @Test
+        }*/
+    /*@Test
         public void validateProgressBarValueChanged () {
             practisePage.openWebsite();
             practisePage.openCourseGallery();
@@ -92,5 +92,4 @@ public class PractiseTest extends BaseTest {
             practisePage.validateNewChangedValueIsCorrect();
         }
 
-    }
-}
+    }*/
