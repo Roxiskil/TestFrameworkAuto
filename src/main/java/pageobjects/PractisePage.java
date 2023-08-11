@@ -1,5 +1,6 @@
 package pageobjects;
 
+import com.google.common.annotations.VisibleForTesting;
 import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -35,13 +37,16 @@ public class PractisePage extends BaseMain {
     String passwordValue = "Password";
     String domain = "https://test.my-fork.com/";
     String URL = domain + "quiz/661";
+    String areaOfExpertise = "///div[@class=\"expertise-areas-list\"]//div";
+    int areaOfExpertiseSizeActual;
+    int areaOfExpertiseSizeExpected = 5;
+
+    boolean expectedHistory = false;
+    boolean actualHistory;
     By numberOfAnsweredQuestions = By.xpath("//div[@class='quiz-process-progress-bar']");
 
     // scenario 1
     public void openCourseGallery() {
-        driver.get(this.webpageURL);
-    }
-    public void historyUnavailable() {
         driver.get(this.webpageURL);
     }
     public void openWebsite() {
@@ -65,6 +70,11 @@ public class PractisePage extends BaseMain {
         WebDriverWait waitForPageToLoad = new WebDriverWait(driver, Duration.ofSeconds(20));
         waitForPageToLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(history_Btn)));
         System.out.println(driver.findElement(By.xpath(history_Btn)).isDisplayed());
+        expectedHistory = driver.findElement(By.xpath(history)).isDisplayed();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(actualHistory, expectedHistory);
+        System.out.println("This functionality is unavailable");
+        softAssert.assertAll();
     }
     public void returnMainPageAfterLogIn() {
         driver.navigate().to(webpageURL);
@@ -80,9 +90,29 @@ public class PractisePage extends BaseMain {
         WebDriverWait waitForPageToLoad = new WebDriverWait(driver, Duration.ofSeconds(20));
         waitForPageToLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(history_Btn)));
         System.out.println(driver.findElement(By.xpath(history_Btn)).isDisplayed());
+
     }
 
     // scenario 2
+
+    public void ValidateMenuItems() {
+
+        List<Object> menuItem = new ArrayList<>();
+        menuItem.add("Development");
+        menuItem.add("Testing");
+        menuItem.add("Business Analysis");
+        menuItem.add("Agile");
+        menuItem.add("Project Management")
+        System.out.println(menuItem);
+        System.out.println(menuItem.size());
+    }
+
+    public void AssertMenuItems() {
+
+        List<WebElement> elementList = driver.findElements(By.xpath(areaOfExpertise));
+        areaOfExpertiseSizeActual = elementList.size();
+        Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
+    }
     public int numberOfAnsweredQuestions() {
         return driver.findElements(numberOfAnsweredQuestions).size();
     }

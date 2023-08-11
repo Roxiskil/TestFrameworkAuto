@@ -19,20 +19,6 @@ import java.util.List;
 public class PractiseTest extends BaseTest {
 
     public ChromeDriver driver;
-
-    protected String websiteURL = "https://test.my-fork.com";
-    protected String webpageURL = "https://test.my-fork.com/quizzes-list";
-
-    String history = "//div[@id='bodyInfoPopup']";
-    String history_Btn = "//a[@class='quiz-section-history-button']";
-    boolean expectedHistory = false;
-    boolean actualHistory;
-    String areaOfExpertise = "///div[@class=\"expertise-areas-list\"]//div";
-    int areaOfExpertiseSizeActual;
-    int areaOfExpertiseSizeExpected = 5;
-    String questionsSQL101 = "//a[@href='/quiz/run/9']";
-    int questionsNumberActual;
-    int questionsNumberExpected = 9;
     String startBtn = "//a[@href='/quiz/run/9']//div";
     String firstQuestionAnswer = "//div[@data-answer-id='3']";
     String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
@@ -41,24 +27,14 @@ public class PractiseTest extends BaseTest {
     public void openMainPage() {
         practisePage.openWebsite();
     }
-
     @Test
     public void openCourseGalleryPage() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
     }
-
     @Test
     public void validateHistoryUnavailable() {
-        practisePage.openWebsite();
         practisePage.signInAndValidateHistory();
-        PractisePage practisePage = new PractisePage(driver);
-        practisePage.historyUnavailable();
-        expectedHistory = driver.findElement(By.xpath(history)).isDisplayed();
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(actualHistory, expectedHistory);
-        System.out.println("This functionality is unavailable");
-        softAssert.assertAll();
     }
     public void returnMainPageAfterLogIn() {
         practisePage.returnMainPageAfterLogIn();
@@ -75,22 +51,13 @@ public class PractiseTest extends BaseTest {
     public void ValidateMenuItems() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
-        List<Object> menuItem = new ArrayList<>();
-        menuItem.add("Development");
-        menuItem.add("Testing");
-        menuItem.add("Business Analysis");
-        menuItem.add("Agile");
-        menuItem.add("Project Management")
-        System.out.println(menuItem);
-        System.out.println(menuItem.size());
+        practisePage.ValidateMenuItems();
     }
     @Test
     public void AssertMenuItems() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
-        List<WebElement> elementList = driver.findElements(By.xpath(areaOfExpertise));
-        areaOfExpertiseSizeActual = elementList.size();
-        Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
+        practisePage.AssertMenuItems();
     }
     //Scenario_3
 
@@ -98,9 +65,7 @@ public class PractiseTest extends BaseTest {
         public void questionsNumberInSQL101Basic() {
             practisePage.openWebsite();
             practisePage.openCourseGalleryPage();
-            List<WebElement> elementList = driver.findElements(By.xpath(questionsSQL101));
-            questionsNumberActual = elementList.size();
-            Assert.assertEquals(questionsNumberActual, questionsNumberExpected);
+            practisePage.questionsNumberInSQL101Basic();
         }
     @Test
         public void clickStartButton() {
