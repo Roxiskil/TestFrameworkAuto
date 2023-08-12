@@ -1,30 +1,47 @@
 package pageobjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 import java.util.logging.Logger;
 
 public class HomePage extends BaseMain {
 
-    public HomePage (WebDriver driver, Logger log) {
+    public HomePage(WebDriver driver, Logger log) {
         super(driver, log);
     }
+
     String urlBestBuy = "http://bestbuy.com";
     String skuCardsLocator = "//div[@data-testid='sku-card']/a/p";
     String websiteURL = "https://test.my-fork.com";
+    String urlStores = "https://www.c21stores.com/";
+    String urlAmazon = "https://www.amazon.com/";
 
-    public void openHomePage () {
+    public List<Integer> openHomePage() {
+        driver.get(websiteURL);
 
-    //public void openBestBuy() {
-        driver.get(urlBestBuy);
+        public List<Integer> websiteURLVerification () {
+            return verifyLinkActive();
+        }
+
+        public List<Integer> openWebsite () {
+            driver.get(urlStores);
+
+            public List<Integer> websiteURLVerification () {
+                return verifyLinkActive();
+            }
+
+            public List<Integer> openMainPage () {
+                driver.get(urlAmazon);
+
+                public List<Integer> websiteURLVerification () {
+                    return verifyLinkActive();
+                }
+            }
+        }
     }
-
-    public void ValidateSkuCards() {
+}
+    /*public void ValidateSkuCards() {
         WebElement element = driver.findElement(By.xpath(skuCardsLocator));
         System.out.println(element.getText());
         System.out.println("____________-");
@@ -56,7 +73,7 @@ public class HomePage extends BaseMain {
         driver.findElement(By.xpath(signUp_Btn)).click();
     }
 }
-
+*/
 
 
 

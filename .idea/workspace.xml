@@ -69,7 +69,7 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SignInTest.test">
+  <component name="RunManager" selected="TestNG.HomePageTest.websiteURLVerification">
     <configuration name="SeleniumProject" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -94,24 +94,6 @@
         </option>
       </MavenSettings>
       <method v="2" />
-    </configuration>
-    <configuration name="Assertions.dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestAutomationFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcases" />
-      <option name="MAIN_CLASS_NAME" value="testcases.Assertions" />
-      <option name="METHOD_NAME" value="dropdown" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
@@ -142,6 +124,24 @@
       <option name="PACKAGE_NAME" value="testcases" />
       <option name="MAIN_CLASS_NAME" value="testcases.DriverInteractions" />
       <option name="METHOD_NAME" value="tab" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest.websiteURLVerification" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.HomePageTest" />
+      <option name="METHOD_NAME" value="websiteURLVerification" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -206,19 +206,19 @@
     <list>
       <item itemvalue="Maven.SeleniumProject" />
       <item itemvalue="TestNG.DriverInteractions.tab" />
+      <item itemvalue="TestNG.HomePageTest.websiteURLVerification" />
       <item itemvalue="TestNG.SignInTest.fillTheSignInForm" />
       <item itemvalue="TestNG.SignInTest.test" />
       <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
-      <item itemvalue="TestNG.Assertions.dropdown" />
       <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.HomePageTest.websiteURLVerification" />
         <item itemvalue="TestNG.SignInTest.test" />
         <item itemvalue="TestNG.SignInTest.fillTheSignInForm" />
         <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
         <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
-        <item itemvalue="TestNG.Assertions.dropdown" />
       </list>
     </recent_temporary>
   </component>
@@ -251,6 +251,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/testcases/DriverInteractions.java</url>
           <line>53</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/testcases/HomePageTest.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
