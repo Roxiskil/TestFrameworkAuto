@@ -50,7 +50,7 @@ import java.util.List;
             System.out.println("title is different");
         }
     }
-/*
+
     public class Assertions extends BaseTest{
         String expectedTitle = "Clinic";
         String actualTitle;
@@ -76,7 +76,7 @@ import java.util.List;
                     Assert.assertEquals(listSizeActual, listSizeExpected, "Didn't match");
         }
 }
-*/
+
 
 
 

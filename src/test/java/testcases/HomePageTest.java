@@ -21,9 +21,9 @@ public class HomePageTest extends BaseTest{
     }
 
     @Test
-    public void websiteStoreVerification(){
-        homePage.openMainPage();
-        List<Integer> codes = homePage.websiteStoreVerification();
+    public void urlStoresVerification(){
+        homePage.openWebsite();
+        List<Integer> codes = homePage.urlStoresVerification();
         SoftAssert softAssert = new SoftAssert();
         Integer expected = 200;
         for (Integer code: codes){
@@ -33,9 +33,9 @@ public class HomePageTest extends BaseTest{
     }
 
     @Test
-    public void websiteAmazonVerification(){
+    public void urlAmazonVerification(){
         homePage.openMainPage();
-        List<Integer> codes = homePage.websiteAmazonVerification();
+        List<Integer> codes = homePage.urlAmazonVerification();
         SoftAssert softAssert = new SoftAssert();
         Integer expected = 200;
         for (Integer code: codes){

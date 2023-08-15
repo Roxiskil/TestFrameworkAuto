@@ -1,7 +1,8 @@
 package pageobjects;
 
 import com.google.common.annotations.VisibleForTesting;
-import dev.failsafe.internal.util.Assert;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -23,6 +24,7 @@ public class PractisePage extends BaseMain {
         super(driver, log);
     }
 
+
     String websiteURL = "https://test.my-fork.com";
     String webpageURL = "https://test.my-fork.com/quizzes-list";
     String signIn_Btn = "//a[@class='menu-item log-in-button']";
@@ -32,6 +34,9 @@ public class PractisePage extends BaseMain {
     String passwordField = "//input[@id='password']";
     String logIn_Btn = "//div[@id='loginButton']/button']";
     String startBtn = "//a[@href='/quiz/run/9']//div";
+
+    String firstQuestionAnswer = "//div[@data-answer-id='3']";
+    String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
     String firstQuestionAnswer = "//div[@data-answer-id='3']";
     String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
     String emailValue = "testing@my-fork.com";
@@ -50,11 +55,9 @@ public class PractisePage extends BaseMain {
     public void openCourseGallery() {
         driver.get(this.webpageURL);
     }
-
     public void openWebsite() {
         driver.get(websiteURL);
     }
-
     public void openCourseGalleryPage() {
         driver.get(webpageURL);
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Documents\\GitHub\\TestFrameworkAuto\\src\\test\\Resources\\executables\\chromedriver.exe");
@@ -63,7 +66,6 @@ public class PractisePage extends BaseMain {
         ChromeDriver driver = new ChromeDriver(options);
         driver.navigate().to(webpageURL);
     }
-
     public void signInAndValidateHistory() {
         driver.get(websiteURL);
         driver.findElement(By.xpath(emailField)).sendKeys(emailValue);
@@ -79,12 +81,10 @@ public class PractisePage extends BaseMain {
         System.out.println("This functionality is unavailable");
         softAssert.assertAll();*/
     }
-
     public void returnMainPageAfterLogIn() {
         driver.navigate().to(webpageURL);
         driver.navigate().to(websiteURL);
     }
-
     public void validateHistoryAgain() {
         driver.navigate().to(websiteURL);
         driver.findElement(By.xpath(signIn_Btn)).click();
@@ -95,11 +95,8 @@ public class PractisePage extends BaseMain {
         WebDriverWait waitForPageToLoad = new WebDriverWait(driver, Duration.ofSeconds(20));
         waitForPageToLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(history_Btn)));
         System.out.println(driver.findElement(By.xpath(history_Btn)).isDisplayed());
-
     }
-
     // scenario 2
-
     public void ValidateMenuItems() {
 
         List<Object> menuItem = new ArrayList<>();
@@ -111,12 +108,11 @@ public class PractisePage extends BaseMain {
         System.out.println(menuItem);
         System.out.println(menuItem.size());
     }
-}
-    /*public void AssertMenuItems() {
 
+    public void AssertMenuItems() {
         List<WebElement> elementList = driver.findElements(By.xpath(areaOfExpertise));
         areaOfExpertiseSizeActual = elementList.size();*/
-      /*  Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
+        Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
     }
     public int numberOfAnsweredQuestions() {
         return driver.findElements(numberOfAnsweredQuestions).size();
@@ -171,7 +167,7 @@ public class PractisePage extends BaseMain {
                 System.out.println(questionAnswered+8);
                 return result;
             }
-        }*/
+        }
 
 
 

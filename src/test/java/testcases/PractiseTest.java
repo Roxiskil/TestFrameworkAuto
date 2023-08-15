@@ -19,9 +19,7 @@ import java.util.List;
 public class PractiseTest extends BaseTest {
 
     public ChromeDriver driver;
-    String startBtn = "//a[@href='/quiz/run/9']//div";
-    String firstQuestionAnswer = "//div[@data-answer-id='3']";
-    String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
+
 
     @Test
     public void openMainPage() {

@@ -1,6 +1,8 @@
 package pageobjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -17,31 +19,33 @@ public class HomePage extends BaseMain {
     String urlStores = "https://www.c21stores.com/";
     String urlAmazon = "https://www.amazon.com/";
 
-    public List<Integer> openHomePage() {
+    public void openHomePage() {
         driver.get(websiteURL);
+    }
 
-        public List<Integer> websiteURLVerification () {
+    public List<Integer> websiteURLVerification() {
+        return verifyLinkActive();
+    }
+
+    public void openWebsite() {
+        driver.get(urlStores);
+    }
+
+    public List<Integer> urlStoresVerification() {
+        return verifyLinkActive();
+    }
+
+    public void openMainPage() {
+        driver.get(urlAmazon);
+
+        public List<Integer> urlAmazonVerification () {
             return verifyLinkActive();
         }
-
-        public List<Integer> openWebsite () {
-            driver.get(urlStores);
-
-            public List<Integer> websiteURLVerification () {
-                return verifyLinkActive();
-            }
-
-            public List<Integer> openMainPage () {
-                driver.get(urlAmazon);
-
-                public List<Integer> websiteURLVerification () {
-                    return verifyLinkActive();
-                }
-            }
-        }
     }
-}
-    /*public void ValidateSkuCards() {
+
+
+
+    public void ValidateSkuCards() {
         WebElement element = driver.findElement(By.xpath(skuCardsLocator));
         System.out.println(element.getText());
         System.out.println("____________-");
@@ -73,7 +77,7 @@ public class HomePage extends BaseMain {
         driver.findElement(By.xpath(signUp_Btn)).click();
     }
 }
-*/
+
 
 
 
