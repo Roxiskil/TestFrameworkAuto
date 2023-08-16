@@ -17,9 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PractiseTest extends BaseTest {
-
     public ChromeDriver driver;
-
 
     @Test
     public void openMainPage() {
@@ -33,8 +31,6 @@ public class PractiseTest extends BaseTest {
     @Test
     public void validateHistoryUnavailable() {
         practisePage.signInAndValidateHistory();
-    }
-    public void returnMainPageAfterLogIn() {
         practisePage.returnMainPageAfterLogIn();
     }
     @Test
@@ -51,43 +47,33 @@ public class PractiseTest extends BaseTest {
         practisePage.openCourseGalleryPage();
         practisePage.ValidateMenuItems();
     }
-    /*@Test
+
+    @Test
     public void AssertMenuItems() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
-        practisePage.AssertMenuItems();*/
+        practisePage.AssertMenuItems();
     }
+
     //Scenario_3
 
-       /* @Test
+    @Test
         public void questionsNumberInSQL101Basic() {
-            practisePage.openWebsite();
-            practisePage.openCourseGalleryPage();
             practisePage.questionsNumberInSQL101Basic();
         }
-    @Test
-        public void clickStartButton() {
-        practisePage.openWebsite();
-        practisePage.openCourseGalleryPage();
-        driver.findElement(By.xpath(startBtn)).click();
-        }
-        public void selectAnswerForFirstQuestion () {
-            driver.findElement(By.xpath(firstQuestionAnswer)).click();
-        }*/
 
-    /*@Test
-        public void validateNumberOfAnsweredQuestionsAndTotalNumber () {
-            practisePage.openWebsite();
-            practisePage.openCourseGallery();
-            practisePage.numberOfAnsweredQuestions();
-            practisePage.clickNextButton();
-        }*/
-    /*@Test
-        public void validateProgressBarValueChanged () {
-            practisePage.openWebsite();
-            practisePage.openCourseGallery();
-            practisePage.validateProgressBarValueChanged();
+    @Test
+        public void clickStartButtonAnswerQuestion() {
+        practisePage.clickStartButtonAnswerQuestion();
+    }
+
+    @Test
+        public void clickNextButtonValidateProgressBarValueChanged () {
+            practisePage.clickNextButtonValidateProgressBarValueChanged();
+        }
+
+    @Test
+        public void validateNewChangedValueIsCorrect () {
             practisePage.validateNewChangedValueIsCorrect();
         }
-
-    }*/
+    }
