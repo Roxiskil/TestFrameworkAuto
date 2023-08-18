@@ -26,11 +26,9 @@ public class HomePage extends BaseMain {
     public List<Integer> websiteURLVerification() {
         return verifyLinkActive();
     }
-
-    public void openWebsite() {
+    /* public void openWebsite() {
         driver.get(urlStores);
     }
-
     public List<Integer> urlStoresVerification() {
         return verifyLinkActive();
     }
@@ -39,10 +37,7 @@ public class HomePage extends BaseMain {
         driver.get(urlAmazon);
 
         public List<Integer> urlAmazonVerification () {
-            return verifyLinkActive();
-        }
-    }
-
+            return verifyLinkActive();*/
 
 
     public void ValidateSkuCards() {

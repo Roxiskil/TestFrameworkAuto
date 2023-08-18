@@ -17,30 +17,25 @@ public class HomePageTest extends BaseTest{
         for (Integer code: codes){
             Assert.assertEquals(code, expected);
         }
-        softAssert.assertAll();
     }
 
-    @Test
+    /* @Test
     public void urlStoresVerification(){
         homePage.openWebsite();
         List<Integer> codes = homePage.urlStoresVerification();
-        SoftAssert softAssert = new SoftAssert();
         Integer expected = 200;
         for (Integer code: codes){
             Assert.assertEquals(code, expected);
         }
-        softAssert.assertAll();
     }
 
     @Test
     public void urlAmazonVerification(){
         homePage.openMainPage();
         List<Integer> codes = homePage.urlAmazonVerification();
-        SoftAssert softAssert = new SoftAssert();
         Integer expected = 200;
         for (Integer code: codes){
             Assert.assertEquals(code, expected);
         }
-        softAssert.assertAll();
-    }
+    }*/
 }

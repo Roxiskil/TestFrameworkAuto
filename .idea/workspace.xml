@@ -24,11 +24,15 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/pageobjects/BaseMain.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/pageobjects/ErrorValidationPage.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/pageobjects/PractisePage.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/pageobjects/SignInPage.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/pageobjects/SignUpPage.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/BaseTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/DataStorage.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/DataStoragePractise.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/testcases/SignUpTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/target/test-classes/testcases/Assertions.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/target/test-classes/testcases/AssertionsSoft.class" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +73,7 @@
       <recent name="C:\Users\HP\Documents\GitProjects\TestFrameworkAuto\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageTest.websiteURLVerification">
+  <component name="RunManager" selected="TestNG.PractiseTest.questionsNumberInSQL101Basic">
     <configuration name="SeleniumProject" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -149,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PractiseTest.AssertMenuItems" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PractiseTest.questionsNumberInSQL101Basic" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -159,7 +163,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="testcases" />
       <option name="MAIN_CLASS_NAME" value="testcases.PractiseTest" />
-      <option name="METHOD_NAME" value="AssertMenuItems" />
+      <option name="METHOD_NAME" value="questionsNumberInSQL101Basic" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -206,19 +210,19 @@
     <list>
       <item itemvalue="Maven.SeleniumProject" />
       <item itemvalue="TestNG.DriverInteractions.tab" />
+      <item itemvalue="TestNG.PractiseTest.questionsNumberInSQL101Basic" />
       <item itemvalue="TestNG.HomePageTest.websiteURLVerification" />
       <item itemvalue="TestNG.SignInTest.fillTheSignInForm" />
       <item itemvalue="TestNG.SignInTest.test" />
       <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
-      <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PractiseTest.questionsNumberInSQL101Basic" />
         <item itemvalue="TestNG.HomePageTest.websiteURLVerification" />
         <item itemvalue="TestNG.SignInTest.test" />
         <item itemvalue="TestNG.SignInTest.fillTheSignInForm" />
         <item itemvalue="TestNG.BestBuyMainPageTest.REQ92832_TC389_4SuggestItemSectionsOnMainPageOnScroll" />
-        <item itemvalue="TestNG.PractiseTest.AssertMenuItems" />
       </list>
     </recent_temporary>
   </component>
