@@ -3,6 +3,7 @@ package pageobjects;
 import com.google.common.annotations.VisibleForTesting;
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +36,6 @@ public class PractisePage extends BaseMain {
     String startBtn = "//a[@href='/quiz/run/9']//div";
     String firstQuestionAnswer = "//div[@data-answer-id='3']";
     String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
-
     String progressBar = "//div[@class='quiz-process-progress-progress']";
     String emailValue = "testing@my-fork.com";
     String passwordValue = "Password";
@@ -50,7 +50,7 @@ public class PractisePage extends BaseMain {
     int questionsNumberExpected = 9;
     boolean expectedHistory = false;
     boolean actualHistory;
-    By numberOfAnsweredQuestions = By.xpath("//div[@class='quiz-process-progress-bar']");
+    By numberOfAnsweredQuestions = By.xpath("//div[@class=\"quiz-process-questions\"]/div");
 
     // scenario 1
     public void openCourseGallery() {
@@ -118,8 +118,13 @@ public class PractisePage extends BaseMain {
     public int numberOfAnsweredQuestions() {
         return driver.findElements(numberOfAnsweredQuestions).size();
     }
+
+    public void waitForNumberOfAnsweredQuestions(){
+        WebDriverWait questionWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        questionWait.until(ExpectedConditions.numberOfElementsToBe(numberOfAnsweredQuestions,0));
+    }
     public void validateNumberOfAnsweredQuestionsAndTotalNumber() {
-        Assert.assertEquals(validateNumberOfAnsweredQuestionsAndTotalNumber(), 1);
+        Assert.assertEquals(validateNumberOfAnsweredQuestionsAndTotalNumber(), 0);
         for (int i = 0; i < 9; i++) {
             System.out.println("iteration number: " + i);
             scroll(1600);
@@ -147,16 +152,16 @@ public class PractisePage extends BaseMain {
         driver.findElement(By.xpath(nextBtn)).click();
                 scroll(5000);
                 try {
-                    waitForNumberOfAnsweredQuestions(11);
-                    Assert.assertEquals(numberOfAnsweredQuestions(), 100);
+                    waitForNumberOfAnsweredQuestions(1);
+                    Assert.assertEquals(numberOfAnsweredQuestions(), 9);
                 } catch (Exception e) {
-                    Assert.assertEquals(numberOfAnsweredQuestions(), 100);
+                    Assert.assertEquals(numberOfAnsweredQuestions(), 9);
                 }
             }
             public String validateNewChangedValueIsCorrect (int searchProgressBarResult){
                 System.out.println(progressBar);
                 String progressBarValue = driver.findElement(By.xpath(progressBar)).getText();
-                progressBarValue.substring(0, progressBarValue.indexOf("11"));
+                progressBarValue.substring(0, progressBarValue.indexOf("100"));
                 String totalValueOfProgressBar = "100";
                 int questionAnswered = Integer.parseInt(totalValueOfProgressBar);
                 System.out.println(questionAnswered+89);
