@@ -45,9 +45,11 @@ public class BaseMain {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0, " + pixels + ")", "");
     }
+
     public void a() {
         scroll(5);
     }
+
     public void switchingBetweenTabAndPage(int tab) {
         List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabHandler.get(tab));
@@ -81,5 +83,17 @@ public class BaseMain {
         }
         return codes; //a return of a list with codes for further verification
     }
-}
 
+    public void setListWithTextForImplementedItems(List<WebElement> webElements, List<String> implementedValuesInText, By locator) {
+        webElements = driver.findElements(locator);
+        public void setListWithTextForImplementedItems;
+        (List < WebElement > webElements, List < String > implementedItemsInText)
+        {
+            for (WebElement element : webElements) {
+                implementedItemsInText.add(element.getText());
+            }
+
+
+        }
+    }
+}

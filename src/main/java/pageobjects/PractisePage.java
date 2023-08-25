@@ -3,7 +3,6 @@ package pageobjects;
 import com.google.common.annotations.VisibleForTesting;
 
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -28,12 +27,12 @@ public class PractisePage extends BaseMain {
     String websiteURL = "https://test.my-fork.com";
     String webpageURL = "https://test.my-fork.com/quizzes-list";
     String signIn_Btn = "//a[@class='menu-item log-in-button']";
-    String history = "//div[@id='bodyInfoPopup']";
+    String history = "//a[text()='History']";
     String history_Btn = "//a[@class='quiz-section-history-button']";
     String emailField = "//input[@id='email']";
     String passwordField = "//input[@id='password']";
     String logIn_Btn = "//div[@id='loginButton']/button']";
-    String startBtn = "//a[@href='/quiz/run/9']//div";
+    String startBtn = "//span[text()='SQL 101 (Basics)']/../../../div[2]/a/div";
     String firstQuestionAnswer = "//div[@data-answer-id='3']";
     String nextBtn = "//div[@class='quiz-process-navigations-block-button-next']";
     String progressBar = "//div[@class='quiz-process-progress-progress']";
@@ -42,7 +41,8 @@ public class PractisePage extends BaseMain {
     String domain = "https://test.my-fork.com/";
     String URL = domain + "quiz/661";
     String questionsSQL101 = "//div[@class=\"quiz-process-questions\"]/div";
-    String areaOfExpertise = "///div[@class=\"expertise-areas-list\"]//div";
+    String areaOfExpertise = "//div[contains(@class, 'expertise-areas-item')]";
+    String numberOfQuestions = "//span[text()='SQL 101 (Basics)']/../../../div[2]/div[@class='quiz-item-questions-count']";
     int areaOfExpertiseSizeActual;
     int areaOfExpertiseSizeExpected = 5;
 
@@ -50,8 +50,22 @@ public class PractisePage extends BaseMain {
     int questionsNumberExpected = 9;
     boolean expectedHistory = false;
     boolean actualHistory;
-    By numberOfAnsweredQuestions = By.xpath("//div[@class=\"quiz-process-questions\"]/div");
+    //Locators
+    private By historyLocator = By.xpath(history);
+    private By areaOfExpertiseLocator = By.xpath(areaOfExpertise);
+    private By numberOfQuestionsLocator = By.xpath(numberOfQuestions);
+    private By startBtnLocator = By.xpath(startBtn);
 
+    //List of expected menu items
+
+    private List<String> expectedMenuItems = new ArrayList<>();
+
+    //List of implemented menu items
+    private List<String> implementedMenuItemsString = new ArrayList<>();
+
+    //List of Web elements
+    private List<WebElement> menuItems;
+    private static int numberOfQuizQuestions;
     // scenario 1
     public void openCourseGallery() {
         driver.get(this.webpageURL);
@@ -111,25 +125,29 @@ public class PractisePage extends BaseMain {
     }
 
     public void AssertMenuItems() {
-        List<WebElement> elementList = driver.findElements(By.xpath(areaOfExpertise));
-        areaOfExpertiseSizeActual = elementList.size();
-        Assert.assertEquals(areaOfExpertiseSizeActual, areaOfExpertiseSizeExpected);
+        setExpectedMenuItems();
+        setListWithTextForImplementedItems(menuItems, implementedMenuItemsString, areaOfExpertiseLocator);
+        setListWithTextForImplementedItems(driver.findElements(areaOfExpertiseLocator), implementedMenuItemsString);
+        Assert.assertEquals(implementedMenuItemsString, expectedMenuItems, "Menu items have been implemented incorrectly");
     }
-    public int numberOfAnsweredQuestions() {
-        return driver.findElements(numberOfAnsweredQuestions).size();
+    public int numberOfQuizQuestions() {
+        String numberIsString = driver.findElement(numberOfQuestionsLocator).getText();
+        String[] parts = numberInString.split("/");
+        String questionsNumberInString = parts[1].trim();
+        numberOfQuizQuestions = Integer.parseInt(questionsNumberInString);
+        return numberOfQuizQuestions;
     }
-
-    public void waitForNumberOfAnsweredQuestions(){
+    public void waitForNumberOfQuizQuestions(){
         WebDriverWait questionWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        questionWait.until(ExpectedConditions.numberOfElementsToBe(numberOfAnsweredQuestions,0));
+        questionWait.until(ExpectedConditions.numberOfElementsToBe(numberOfQuizQuestions,0));
     }
     public void validateNumberOfAnsweredQuestionsAndTotalNumber() {
         Assert.assertEquals(validateNumberOfAnsweredQuestionsAndTotalNumber(), 0);
         for (int i = 0; i < 9; i++) {
             System.out.println("iteration number: " + i);
             scroll(1600);
-            waitForNumberOfAnsweredQuestions(i);
-            Assert.assertEquals(numberOfAnsweredQuestions(), i);
+            waitForNumberOfQuizQuestions(i);
+            Assert.assertEquals(numberOfQuizQuestions(), i);
         }
     }
         // scenario 3
@@ -140,11 +158,12 @@ public class PractisePage extends BaseMain {
             Assert.assertEquals(questionsNumberActual, questionsNumberExpected);
         }
         public void clickStartButtonAnswerQuestion() {
-            driver.get(this.webpageURL);
             driver.findElement(By.xpath(startBtn)).click();
-            driver.findElement(By.xpath(firstQuestionAnswer)).click();
-        }
 
+        }
+        public static int getNumberOfQuestions(){
+                return numberOfQuizQuestions;
+        }
     public void clickNextButtonValidateProgressBarValueChanged () {
         driver.get(this.webpageURL);
         driver.findElement(By.xpath(startBtn)).click();
@@ -152,10 +171,10 @@ public class PractisePage extends BaseMain {
         driver.findElement(By.xpath(nextBtn)).click();
                 scroll(5000);
                 try {
-                    waitForNumberOfAnsweredQuestions(1);
-                    Assert.assertEquals(numberOfAnsweredQuestions(), 9);
+                    waitForNumberOfQuizQuestions(1);
+                    Assert.assertEquals(numberOfQuizQuestions(), 9);
                 } catch (Exception e) {
-                    Assert.assertEquals(numberOfAnsweredQuestions(), 9);
+                    Assert.assertEquals(numberOfQuizQuestions(), 9);
                 }
             }
             public String validateNewChangedValueIsCorrect (int searchProgressBarResult){
@@ -165,7 +184,7 @@ public class PractisePage extends BaseMain {
                 String totalValueOfProgressBar = "100";
                 int questionAnswered = Integer.parseInt(totalValueOfProgressBar);
                 System.out.println(questionAnswered+89);
-                return driver.findElements(numberOfAnsweredQuestions).get(searchProgressBarResult).getText();
+                return driver.findElements(numberOfQuizQuestions).get(searchProgressBarResult).getText();
             }
         }
 
