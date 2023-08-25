@@ -83,11 +83,10 @@ public class BaseMain {
         }
         return codes; //a return of a list with codes for further verification
     }
-
     public void setListWithTextForImplementedItems(List<WebElement> webElements, List<String> implementedValuesInText, By locator) {
         webElements = driver.findElements(locator);
         public void setListWithTextForImplementedItems;
-        (List < WebElement > webElements, List < String > implementedItemsInText)
+        (List < WebElement > webElements, List < String > implementedItemsInText);
         {
             for (WebElement element : webElements) {
                 implementedItemsInText.add(element.getText());

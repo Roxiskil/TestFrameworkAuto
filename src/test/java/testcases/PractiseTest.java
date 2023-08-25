@@ -18,62 +18,34 @@ import java.util.List;
 
 public class PractiseTest extends BaseTest {
     public ChromeDriver driver;
-
+// scenario 1
     @Test
-    public void openMainPage() {
-        practisePage.openWebsite();
-    }
-    @Test
-    public void openCourseGalleryPage() {
+    public void historyAvailability() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
-    }
-    @Test
-    public void validateHistoryUnavailable() {
         practisePage.signInAndValidateHistory();
         practisePage.returnMainPageAfterLogIn();
-    }
-    @Test
-    public void validateHistoryAgain() {
-        practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
         practisePage.validateHistoryAgain();
     }
 
     //Scenario_2
     @Test
-    public void ValidateMenuItems() {
+    public void ValidateMenuItemsInCourseGallery() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
         practisePage.ValidateMenuItems();
     }
 
+    //Scenario_3
     @Test
-    public void AssertMenuItems() {
+        public void questionsProgressBar() {
         practisePage.openWebsite();
         practisePage.openCourseGalleryPage();
-        practisePage.AssertMenuItems();
-    }
-
-    //Scenario_3
-
-    @Test
-        public void questionsNumberInSQL101Basic() {
-            practisePage.questionsNumberInSQL101Basic();
-        }
-
-    @Test
-        public void clickStartButtonAnswerQuestion() {
+        practisePage.questionsNumberInSQL101Basic();
         practisePage.clickStartButtonAnswerQuestion();
-    }
-
-    @Test
-        public void clickNextButtonValidateProgressBarValueChanged () {
-            practisePage.clickNextButtonValidateProgressBarValueChanged();
-        }
-
-    @Test
-        public void validateNewChangedValueIsCorrect () {
-            practisePage.validateNewChangedValueIsCorrect();
+        practisePage.switchToTab(1);
+        practisePage.clickNextButtonValidateProgressBarValueChanged();
+        practisePage.validateNewChangedValueIsCorrect();
         }
     }
