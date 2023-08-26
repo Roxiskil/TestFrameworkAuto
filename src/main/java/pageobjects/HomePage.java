@@ -8,17 +8,41 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class HomePage extends BaseMain {
-
     public HomePage(WebDriver driver, Logger log) {
         super(driver, log);
     }
 
+    //homework-9
+
+    //URLs
+    String websiteURL = "https://test.my-fork.com";
+
+    //GUI elements XPaths
+    String signIn_Btn = "//a[@class='menu-item log-in-button']";
+    String signUp_Btn = "//div[@id='sign-up-button']";
+    String linkCourseGallery = "//div[text()='Course Gallery']/..";
+
+    public void openWebsite() {
+        driver.get(websiteURL);
+    }
+
+    public void openSignUpPage() {
+        driver.findElement(By.xpath(signUp_Btn)).click();
+    }
+    public void openSignInPage() {
+        driver.findElement(By.xpath(signIn_Btn)).click();
+    }
+    public void openCourseGalleryPage() {
+        driver.findElement(By.xpath(linkCourseGallery)).click();
+    }
+    public void returnMainPageAfterLogIn() {
+        driver.get(websiteURL);
+    }
+
     String urlBestBuy = "http://bestbuy.com";
     String skuCardsLocator = "//div[@data-testid='sku-card']/a/p";
-    String websiteURL = "https://test.my-fork.com";
     String urlStores = "https://www.c21stores.com/";
     String urlAmazon = "https://www.amazon.com/";
-
     public void openHomePage() {
         driver.get(websiteURL);
     }
@@ -49,13 +73,13 @@ public class HomePage extends BaseMain {
             System.out.println(i + ": " + skuCards.get(i).getText());
         }
     }
-    String signIn_Btn = "//a[@class='menu-item log-in-button']";
+
     String emailTxtField = "//input[@id='email']";
     String passwordTxtField = "//input[@id='password']";
     String logIn_Btn = "//div[@id='loginButton']/button']";
     String logIn_Error = "//p[@text-point='login-error']/..";
     String rememberMe_Checkbox = "//input[@id='auth-page-remember-me']";
-    String signUp_Btn = "//div[@id='sign-up-button']";
+
 
     //values
     String emailValue = "roxiskil@gmail.com";

@@ -21,31 +21,31 @@ public class PractiseTest extends BaseTest {
 // scenario 1
     @Test
     public void historyAvailability() {
-        practisePage.openWebsite();
-        practisePage.openCourseGalleryPage();
-        practisePage.signInAndValidateHistory();
-        practisePage.returnMainPageAfterLogIn();
-        practisePage.openCourseGalleryPage();
-        practisePage.validateHistoryAgain();
+        homePage.openWebsite();
+        homePage.openCourseGalleryPage();
+        practisePage.isHistoryDisplayed(false);
+        homePage.returnMainPageAfterLogIn();
+        signInPage.signInAndValidateHistory();
+        homePage.openCourseGalleryPage();
+        practisePage.isHistoryDisplayed(true);
     }
 
     //Scenario_2
     @Test
-    public void ValidateMenuItemsInCourseGallery() {
-        practisePage.openWebsite();
-        practisePage.openCourseGalleryPage();
-        practisePage.ValidateMenuItems();
+    public void validateMenuItemsInCourseGallery() {
+        homePage.openWebsite();
+        homePage.openCourseGalleryPage();
+        practisePage.validateMenuItems();
     }
 
     //Scenario_3
     @Test
         public void questionsProgressBar() {
-        practisePage.openWebsite();
-        practisePage.openCourseGalleryPage();
-        practisePage.questionsNumberInSQL101Basic();
+        homePage.openWebsite();
+        homePage.openCourseGalleryPage();
+        practisePage.numberOfQuizQuestions();
         practisePage.clickStartButtonAnswerQuestion();
-        practisePage.switchToTab(1);
-        practisePage.clickNextButtonValidateProgressBarValueChanged();
-        practisePage.validateNewChangedValueIsCorrect();
+        practisePage.switchingBetweenTabAndPage(1);
+        quizPage.verifyQuizProgressBarForAllAnswers();
         }
     }

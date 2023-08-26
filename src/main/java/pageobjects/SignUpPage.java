@@ -17,13 +17,11 @@ public class SignUpPage extends BaseMain {
     String signUp_Btn = "//div[@id='sign-up-button']";
     String jobTitle = "//select[@id='job-title']";
 
-
     public void ValidateJobTitleDropdown() throws InterruptedException {
         driver.get(websiteURL);
         driver.findElement(By.xpath(jobTitle)).isSelected();
 
     }
-
     public void openSignUpPage() throws InterruptedException {
         driver.get(websiteURL);
         driver.findElement(By.xpath(signUp_Btn)).click();

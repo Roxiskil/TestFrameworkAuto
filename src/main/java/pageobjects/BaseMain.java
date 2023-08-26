@@ -19,7 +19,6 @@ public class BaseMain {
         this.driver = driver;
         this.log = logger;
     }
-
     public void clickUsingXpath(String xpath, String elementName) {
         driver.findElement(By.xpath(xpath)).click();
         System.out.println("Element: " + elementName + " was successfully clicked");
@@ -45,7 +44,6 @@ public class BaseMain {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0, " + pixels + ")", "");
     }
-
     public void a() {
         scroll(5);
     }
@@ -54,7 +52,24 @@ public class BaseMain {
         List<String> tabHandler = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabHandler.get(tab));
     }
+    public void verticalScroll(int pixels){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0," + pixels + ")", "");
+    }
 
+    public void isElementDisplayedDependsOfLogin(By locator, boolean isLoggedIn) {
+        if (isLoggedIn) {
+            Assert.assertTrue(driver.findElement(locator).isDisplayed());
+        } else {
+            Assert.assertTrue(driver.findElements(locator).isEmpty());
+        }
+    }
+    public void setListWithTextForImplementedItems(List<WebElement> webElements, List<String> implementedValuesInText, By locator) {
+        webElements = driver.findElements(locator);
+        for(WebElement element : webElements) {
+            implementedValuesInText.add(element.getText());
+        }
+    }
     public List<Integer> verifyLinkActive() {
 
         List<WebElement> linkElements = driver.findElements(By.xpath("//a")); //collect all links from page
@@ -82,17 +97,6 @@ public class BaseMain {
             }
         }
         return codes; //a return of a list with codes for further verification
-    }
-    public void setListWithTextForImplementedItems(List<WebElement> webElements, List<String> implementedValuesInText, By locator) {
-        webElements = driver.findElements(locator);
-        public void setListWithTextForImplementedItems;
-        (List < WebElement > webElements, List < String > implementedItemsInText);
-        {
-            for (WebElement element : webElements) {
-                implementedItemsInText.add(element.getText());
-            }
-
 
         }
     }
-}

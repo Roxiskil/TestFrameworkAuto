@@ -23,7 +23,7 @@ public class BaseTest {
   ErrorValidationPage errorValidationPage;
   SignUpPage signUpPage;
   CheckboxPage checkboxPage;
-
+QuizPage quizPage;
   PractisePage practisePage;
   BestBuyMainPage bestBuyMainPage;
     @BeforeMethod(groups = {"sign", "login", "checkbox", "dropbox"}, alwaysRun = true)
@@ -42,10 +42,14 @@ public class BaseTest {
         checkboxPage = new CheckboxPage(driver, log);
         signUpPage = new SignUpPage(driver, log);
         practisePage = new PractisePage(driver, log);
+        quizPage = new QuizPage(driver, log);
         bestBuyMainPage = new BestBuyMainPage(driver, log);
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
+
     @AfterMethod(groups = {"sign", "login", "checkbox", "dropbox"}, alwaysRun = true)
     public void closeBrowser() {
         driver.quit();
